@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">SmartEating</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="click">click</string>
+    <string name="Home">Home</string>
+    <string name="NutritionSearch">Search</string>
+    <string name="Planting">Growing</string>
+    <string name="help">Help</string>
+    <string name="title">Title</string>
+    <string name="overview">Overview</string>
+    <string name="content_overview">Content Overview</string>
+    <string name="details">Details</string>
+    <string name="content_time">Content Time</string>
+    <string name="Consule">Communication</string>
+
+
+    <string name="macronutrients">Macronutrients</string>
+    <string name="energy">Energy (KJ)</string>
+    <string name="carbohydrates">Carbohydrates (g)</string>
+    <string name="protein">Protein (g)</string>
+    <string name="dietaryFibre">Dietary Fibre (g)</string>
+    <string name="totalFat">Total Fat (g)</string>
+    <string name="totalSugars">Toal Sugars(g)</string>
+    <string name="vitamins">Vitamins</string>
+    <string name="b1">B1 (mg)</string>
+    <string name="b2">B2 (mg)</string>
+    <string name="b3">B3 (mg)</string>
+    <string name="b6">B6 (mg)</string>
+    <string name="b12">B12 (mg)</string>
+    <string name="c">C (mg)</string>
+    <string name="e">E (mg)</string>
+    <string name="a">A (mg)</string>
+    <string name="folates">Folates (µg)</string>
+    <string name="minerals">Minerals</string>
+    <string name="calcium">Calcium (mg)</string>
+    <string name="iodine">Iodine (µg)</string>
+    <string name="iron">Iron (mg)</string>
+    <string name="magnesium">Magnesium (mg)</string>
+    <string name="phosphorus">Phosphorus (mg)</string>
+    <string name="potassium">Potassium (mg)</string>
+    <string name="selenium">Seleneium (µg)</string>
+    <string name="sodium">Sodium (mg)</string>
+    <string name="zinc">Zinc (mg)</string>
+    <string name="cholesterol">Cholesterol (mg)</string>
+    <string name="starch">Starch (g)</string>
+
+    <string name="toast_test">email address should be valid and password length should larger than 4</string>
+    <string name="toast_test_sameUser">Register failed,user has been registered</string>
+</resources>

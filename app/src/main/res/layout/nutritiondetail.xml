@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FDFEFE"
+            android:stretchColumns="1"
+            android:paddingLeft="70dp"
+            android:paddingRight="70dp">
+
+            <TableRow>
+
+                <TextView
+                    android:id="@+id/input_foodName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:textColor="#000"
+                    android:textSize="25sp" />
+            </TableRow>
+
+
+            <TableRow
+                android:background="#81c784"
+                android:layout_margin="0.5dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/macronutrients"
+                    android:textColor="#FDFEFE"
+                    android:textSize="25sp"
+                    android:paddingLeft="25dp" />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/energy"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp"
+
+                    />
+
+                <TextView
+                    android:id="@+id/input_energy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/carbohydrates"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_carbohydrates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/protein"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_protein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_weight="70"
+                    android:text="@string/dietaryFibre"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_dietaryFibre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/totalFat"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_totalFat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/totalSugars"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_totalSugars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow
+                android:background="#81c784"
+                android:layout_margin="0.5dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/vitamins"
+                    android:textColor="#FDFEFE"
+                    android:textSize="25sp"
+                    android:paddingLeft="25dp" />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/b1"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/b2"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_b2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/b3"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_b3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/b6"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_b6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/b12"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_b12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/c"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/e"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/a"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/folates"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_folates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+
+            <TableRow
+                android:background="#81c784"
+                android:layout_margin="0.5dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/minerals"
+                    android:textColor="#FDFEFE"
+                    android:textSize="25sp"
+                    android:paddingLeft="25dp" />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/calcium"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_calcium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/iodine"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_iodine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/iron"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_iron"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/magnesium"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_magnesium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/phosphorus"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_phosphorus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/potassium"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_potassium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/selenium"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_selenium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/sodium"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_sodium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/zinc"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_zinc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow
+                android:background="#81c784"
+                android:layout_margin="0.5dip">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text=""
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+            </TableRow>
+
+            <TableRow android:background="#e0e0e0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/cholesterol"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_cholesterol"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/starch"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:paddingLeft="25dp" />
+
+                <TextView
+                    android:id="@+id/input_starch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+
+                    />
+            </TableRow>
+        </TableLayout>
+
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background3">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:text="The Chosen Undernutrition"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/undernutrition_chosen"
+            android:layout_width="190dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/vitamin_a_click" />
+
+        <ImageView
+            android:id="@+id/introduction"
+            android:layout_width="330dp"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:scaleType="fitXY" />
+
+
+        <TextView
+            android:id="@+id/suggested_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:textColor="#000"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/suggested_table"
+            android:layout_width="280dp"
+            android:layout_height="320dp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+
+            android:padding="1dp"
+            android:paddingBottom="10dp"
+            android:scaleType="fitXY" />
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+
+
+    <!--android:text="VitaminB is used by all yout cells and responsible for helping convert food into energy"--><!--android:text="Symptoms: appeetite loss, weakness, limbs pain"--><!--<TextView--><!--android:id="@+id/introduction_1"--><!--android:layout_height="wrap_content"--><!--android:layout_width="wrap_content"--><!--android:layout_gravity="center"--><!--android:textColor="#000"--><!--android:textSize="15sp"--><!--android:paddingLeft="20dp"--><!--/>-->
+
+    <!--<TextView--><!--android:id="@+id/introduction_2"--><!--android:layout_height="wrap_content"--><!--android:layout_width="wrap_content"--><!--android:layout_gravity="center"--><!--android:textColor="#000"--><!--android:textSize="15sp"--><!--android:paddingBottom="10dp"--><!--/>-->

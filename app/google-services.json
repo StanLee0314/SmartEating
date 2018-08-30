@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "681364128293",
+    "firebase_url": "https://smarteating-841d0.firebaseio.com",
+    "project_id": "smarteating-841d0",
+    "storage_bucket": "smarteating-841d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681364128293:android:44a6fb3c547a3b50",
+        "android_client_info": {
+          "package_name": "com.example.steven.smarteating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681364128293-1i39orvahfa6djf5ue850a4vs36mj8r9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.steven.smarteating",
+            "certificate_hash": "6f69032ecd73b4a0cb9f04004b09e5280ca159af"
+          }
+        },
+        {
+          "client_id": "681364128293-stdnd36cv387hc73oo4cvuj4f7ocj8v0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB07cjDdGc140_7Qnh5KxmmQQ0zad5YcKw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681364128293-stdnd36cv387hc73oo4cvuj4f7ocj8v0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
