@@ -13,6 +13,7 @@ import butterknife.ButterKnife;
 
 /**
  * Created by steven on 8/26/2018.
+ * This activity is for showing undernutrition facts
  */
 
 public class NutritionFactsShow extends AppCompatActivity {

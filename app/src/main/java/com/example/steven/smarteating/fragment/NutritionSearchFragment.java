@@ -29,6 +29,7 @@ import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
+ * This fragment is for searching food nutrition values
  */
 public class NutritionSearchFragment extends Fragment {
     View view;
@@ -60,7 +61,7 @@ public class NutritionSearchFragment extends Fragment {
         ButterKnife.bind(this, view);
         mSearchField = (EditText) view.findViewById(R.id.et_title);
         btnSearch = (Button) view.findViewById(R.id.btn_search);
-        view.setBackground(getResources().getDrawable(R.drawable.background2));
+//        view.setBackground(getResources().getDrawable(R.drawable.background2));
 
         init();
 

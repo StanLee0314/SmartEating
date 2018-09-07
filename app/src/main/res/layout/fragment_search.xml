@@ -5,83 +5,77 @@
     android:padding="@dimen/tab_padding"
     tools:context="com.example.steven.smarteating.activity.NutritionShow">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:fontFamily="@font/roboto"
+            android:paddingBottom="3dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:text="Australia Guide to Healthy Eating - Five Group"
+            android:textColor="#000"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="115dp"
+            android:paddingBottom="5dp">
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@drawable/group_food"
+                android:scaleType="fitXY" />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="89dp"
             android:gravity="center"
-            android:orientation="vertical"
-            android:paddingBottom="8dp">
+            android:orientation="horizontal"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
+            android:weightSum="1">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="Australia Guide to Healthy Eating - Five Food Group"
-                android:layout_gravity="center"
-                android:textColor="#000"
-                android:paddingLeft="25dp"
-                android:textSize="15sp"
-                android:paddingTop="5dp"
-                android:paddingBottom="8dp" />
-
-            <LinearLayout
-                android:layout_height="158dp"
-                android:layout_width="wrap_content"
-                android:paddingBottom="5dp">
-
-                <ImageView
-                    android:layout_width="155dp"
-                    android:layout_height="155dp"
-                    android:adjustViewBounds="true"
-                    android:layout_gravity="center"
-                    android:scaleType="fitXY"
-                    android:background="@drawable/pie" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
+            <EditText
+                android:id="@+id/et_title"
+                android:layout_width="236dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:weightSum="1"
+                android:layout_weight="0.9"
+                android:background="@drawable/edittext_style"
+                android:fontFamily="@font/roboto_light"
+                android:ems="10"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
                 android:paddingLeft="20dp"
-                android:paddingRight="20dp">
+                android:paddingRight="20dp"
+                android:paddingTop="10dp" />
 
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/layout_button"
+                android:text="search"
+                android:textColor="@color/textColorPrimary" />
+        </LinearLayout>
 
-                <EditText
-                    android:id="@+id/et_title"
-                    android:layout_width="236dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="0.9"
-                    android:ems="10"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:paddingBottom="10dp"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
-                    android:paddingTop="10dp"
-                    android:background="@drawable/edittext_style" />
-
-                <Button
-                    android:id="@+id/btn_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:layout_weight="0.1"
-                    android:background="@drawable/layout_button"
-                    android:text="search"
-                    android:textColor="@color/textColorPrimary"
-
-                    />
-
-            </LinearLayout>
-
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -90,25 +84,15 @@
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
                 android:paddingRight="@dimen/activity_horizontal_margin"
-                android:paddingTop="@dimen/activity_vertical_margin"
-                android:weightSum="1">
+                android:paddingTop="@dimen/activity_vertical_margin">
 
-                <ScrollView
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/foodsearch_rv_list"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/foodsearch_rv_list"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_below="@+id/foodsearch_search_field"
-                        android:layout_marginTop="2dp">
-
-                    </android.support.v7.widget.RecyclerView>
-                </ScrollView>
-
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/foodsearch_search_field"
+                    android:layout_marginTop="2dp"></android.support.v7.widget.RecyclerView>
             </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 </FrameLayout>

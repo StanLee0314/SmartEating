@@ -18,6 +18,8 @@ import com.example.steven.smarteating.fragment.CommunityFragment;
 import com.example.steven.smarteating.fragment.HomeFragment;
 import com.example.steven.smarteating.fragment.NutritionSearchFragment;
 import com.example.steven.smarteating.fragment.PlantingFragment;
+import com.example.steven.smarteating.fragment.ReplacementFragment;
+import com.example.steven.smarteating.fragment.UndernutritionFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -58,9 +61,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), getResources().getString(R.string.Home));
         adapter.addFrag(new NutritionSearchFragment(), getResources().getString(R.string.NutritionSearch));
-        adapter.addFrag(new PlantingFragment(), getResources().getString(R.string.Planting));
-        adapter.addFrag(new CommunityFragment(), getResources().getString(R.string.Consule));
-//        adapter.addFrag(new CinemasDisplayFragment(),"Cinema");
+        adapter.addFrag(new ReplacementFragment(), "Replacement");
+        adapter.addFrag(new UndernutritionFragment(), "Undernutrition");
         viewPager.setOffscreenPageLimit(4);
         viewPager.setAdapter(adapter);
     }
@@ -114,14 +116,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.home) {
             viewPager.setCurrentItem(0);
-        } else if (id == R.id.home) {
-            viewPager.setCurrentItem(0);
         } else if (id == R.id.nutritionFacts) {
             viewPager.setCurrentItem(1);
         } else if (id == R.id.nutritionReplacement) {
-            viewPager.setCurrentItem(3);
+            viewPager.setCurrentItem(2);
         } else if (id == R.id.overcomeUndernutrition) {
-            viewPager.setCurrentItem(4);
+            viewPager.setCurrentItem(3);
         } else if (id == R.id.planting) {
             viewPager.setCurrentItem(5);
         } else if (id == R.id.nutritionQuiz) {
@@ -130,8 +130,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             viewPager.setCurrentItem(7);
         } else if (id == R.id.communityGargen) {
             viewPager.setCurrentItem(8);
-        } else if (id == R.id.shareExperience) {
-            viewPager.setCurrentItem(9);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

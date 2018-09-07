@@ -6,44 +6,40 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/home"
-            android:icon="@drawable/ic_menu_home"
-            android:title="Mian Menu" />
+            android:icon="@drawable/main_menu"
+            android:title="Home" />
         <item
             android:id="@+id/nutritionFacts"
-            android:icon="@drawable/ic_menu_search"
+            android:icon="@drawable/nutrition_facts"
             android:title="Nutrition Facts" />
 
         <item
             android:id="@+id/nutritionReplacement"
-            android:icon="@drawable/icon_hamburger"
-            android:title="NutritionF Replacement" />
+            android:icon="@drawable/nutrition_replacement"
+            android:title="Food Replacements" />
 
         <item
             android:id="@+id/overcomeUndernutrition"
-            android:icon="@drawable/ic_menu_assignment"
+            android:icon="@drawable/overcome_undernutrition"
             android:title="Overcome Undernutrition" />
 
         <item
             android:id="@+id/planting"
-            android:icon="@drawable/icons_watering_can"
+            android:icon="@drawable/grow_your_own"
             android:title="Grow Your Own" />
 
         <item
             android:id="@+id/nutritionQuiz"
-            android:icon="@drawable/ic_menu_note"
+            android:icon="@drawable/nutrition_quiz"
             android:title="Nutrition Quiz" />
         <item
             android:id="@+id/nearbyMarket"
-            android:icon="@drawable/icon_ingredients"
+            android:icon="@drawable/nearby_market"
             android:title="Nearby Market" />
         <item
             android:id="@+id/communityGargen"
-            android:icon="@drawable/icon_tree"
+            android:icon="@drawable/community_garden"
             android:title="Community Garden" />
-        <item
-            android:id="@+id/shareExperience"
-            android:icon="@drawable/ic_menu_send"
-            android:title="Share Experience" />
     </group>
 
 </menu>

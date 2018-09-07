@@ -11,6 +11,7 @@ import com.example.steven.smarteating.R;
 
 /**
  * Created by steven on 8/24/2018.
+ * This activity is for showing nutrition values
  */
 
 public class NutritionShow extends AppCompatActivity {
@@ -134,8 +135,8 @@ public class NutritionShow extends AppCompatActivity {
         Long mzinc = getIntent().getLongExtra(EXTRA_ZINC, 0);
         Long mcholesterol = getIntent().getLongExtra(EXTRA_CHOLESTEROL, 0);
         Long mstarch = getIntent().getLongExtra(EXTRA_STARCH, 0);
-        String mfoodname_first = mfoodname.substring(0, mfoodname.indexOf(",")).toUpperCase();
-        foodName.setText(mfoodname_first);
+        String[] arr = mfoodname.split(",");
+        foodName.setText(arr[0].toUpperCase());
         energy.setText(menergy.toString());
         carbohydrates.setText(mcarbohyrates.toString());
         protein.setText(mprotein.toString());
