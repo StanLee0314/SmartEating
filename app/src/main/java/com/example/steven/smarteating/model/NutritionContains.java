@@ -10,6 +10,9 @@ import android.os.Parcelable;
 public class NutritionContains {
     private String food_ID;
     private String food_Name;
+    private Long category;
+
+
     private Long energy;
     private Long carbohydrates;
     private Long protein;
@@ -29,21 +32,23 @@ public class NutritionContains {
     private Long iodine;
     private Long iron;
 
-    public NutritionContains(String food_ID, String food_Name,
-                             Long energy, Long carbohydrates, Long protein,
-                             Long dietary_fibre, Long total_fat, Long total_sugars,
-                             Long vitamin_B1, Long vitamin_B2, Long vitamin_B3,
-                             Long vitamin_B6, Long vitamin_B12, Long vitamin_C,
-                             Long vitamin_E, Long vitamin_A, Long total_Folates,
-                             Long calcium, Long iodine, Long iron, Long magnesium,
-                             Long phosphorus, Long potassium, Long selenium,
-                             Long sodium, Long zinc, Long cholesterol, Long starch) {
+    public Long getCategory() {
+        return category;
+    }
+
+    public void setCategory(Long category) {
+        this.category = category;
+    }
+
+    public NutritionContains(String food_ID, String food_Name, Long category, Long energy, Long carbohydrates, Long protein, Long dietary_fibre, Long total_fat, Long total_sugars, Long vitamin_B1, Long vitamin_B2, Long vitamin_B3, Long vitamin_B6, Long vitamin_B12, Long vitamin_C, Long vitamin_E, Long vitamin_A, Long total_Folates, Long calcium, Long iodine, Long iron, Long magnesium, Long phosphorus, Long potassium, Long selenium, Long sodium, Long zinc, Long cholesterol, Long starch) {
         this.food_ID = food_ID;
         this.food_Name = food_Name;
+        this.category = category;
         this.energy = energy;
         this.carbohydrates = carbohydrates;
         this.protein = protein;
         this.dietary_fibre = dietary_fibre;
+
         this.total_fat = total_fat;
         this.total_sugars = total_sugars;
         this.vitamin_B1 = vitamin_B1;

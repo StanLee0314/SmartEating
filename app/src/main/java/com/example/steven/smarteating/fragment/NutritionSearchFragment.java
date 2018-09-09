@@ -59,8 +59,8 @@ public class NutritionSearchFragment extends Fragment {
 
         view = inflater.inflate(R.layout.fragment_search, container, false);
         ButterKnife.bind(this, view);
-        mSearchField = (EditText) view.findViewById(R.id.et_title);
-        btnSearch = (Button) view.findViewById(R.id.btn_search);
+        mSearchField = view.findViewById(R.id.et_title);
+        btnSearch = view.findViewById(R.id.btn_search);
 //        view.setBackground(getResources().getDrawable(R.drawable.background2));
 
         init();
@@ -88,7 +88,7 @@ public class NutritionSearchFragment extends Fragment {
     private void init() {
         taskList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
-        db = FirebaseDatabase.getInstance().getReference("foodNutrition");
+        db = FirebaseDatabase.getInstance().getReference("smartEating").child("foodNutrition");
     }
 
 
