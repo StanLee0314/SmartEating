@@ -23,6 +23,8 @@ import com.example.steven.smarteating.fragment.NutritionSearchFragment;
 import com.example.steven.smarteating.fragment.PlantingFragment;
 import com.example.steven.smarteating.fragment.ReplacementFragment;
 import com.example.steven.smarteating.fragment.UndernutritionFragment;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,13 +34,16 @@ import java.util.List;
  * The menu for the application which contains five fragments and one activity to the account profile.
  */
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
+    private FirebaseAuth mAuth;
+    private FirebaseUser mUser;
     TabLayout tabLayout;
     ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -57,6 +62,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
         navigationView.setNavigationItemSelectedListener(this);
+        mAuth = FirebaseAuth.getInstance();
+
+        if (mAuth.getCurrentUser() != null) {
+
+        } else {
+
+            mAuth.signInAnonymously();
+        }
     }
 
     //tab
@@ -139,8 +152,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
-
 }
 
 

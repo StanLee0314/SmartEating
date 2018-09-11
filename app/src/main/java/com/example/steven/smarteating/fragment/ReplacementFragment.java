@@ -2,10 +2,13 @@ package com.example.steven.smarteating.fragment;
 
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,13 +23,24 @@ import com.example.steven.smarteating.activity.ReplacementRanks;
 import com.example.steven.smarteating.model.NutritionContains;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+import java.io.FileInputStream;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static android.content.ContentValues.TAG;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -34,8 +48,6 @@ import butterknife.ButterKnife;
  */
 public class ReplacementFragment extends Fragment {
     View view;
-
-
     Button btnSearch;
     private EditText mSearchField;
     private FirebaseAnalytics mFirebaseAnalytics;
@@ -69,6 +81,7 @@ public class ReplacementFragment extends Fragment {
 
         getBookReciptList("Search here");
 
+
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -87,6 +100,8 @@ public class ReplacementFragment extends Fragment {
 
 
     private void init() {
+
+
         taskList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         db = FirebaseDatabase.getInstance().getReference("smartEating").child("foodNutrition");
@@ -185,5 +200,6 @@ public class ReplacementFragment extends Fragment {
         super.onStop();
 
     }
+
 
 }
