@@ -48,7 +48,7 @@
     <string name="zinc">Zinc (mg)</string>
     <string name="cholesterol">Cholesterol (mg)</string>
     <string name="starch">Starch (g)</string>
-    <string name="google_maps_key">AIzaSyD039Bais49ThxOPmXI5DvZL8yge_3-_FM</string>
+    <string name="google_maps_key">AIzaSyA-Woam0VHTBfdysWyurnx9NE922P26Doc</string>
 
     <string name="toast_test">email address should be valid and password length should larger than 4</string>
     <string name="toast_test_sameUser">Register failed,user has been registered</string>
