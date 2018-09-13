@@ -49,28 +49,28 @@ public class ReplacementRanks extends AppCompatActivity {
         String mfoodname = getIntent().getStringExtra(EXTRA_FOODNAME);
         String[] arr = mfoodname.split(",");
         textView.setText(arr[0].toUpperCase());
-        Long menergy = getIntent().getLongExtra(EXTRA_CATEGORY, 0);
+        Double menergy = getIntent().getDoubleExtra(EXTRA_CATEGORY, 0);
         init();
-        Integer i = (int) (long) menergy;
+        int i = (int) Math.round(menergy);
         switch (i) {
             case 1:
-                categoryView.setText("Grains");
+                categoryView.setText("(Grains)");
                 db = db.child("category_1");
                 break;
             case 2:
-                categoryView.setText("Vegetable");
+                categoryView.setText("(Vegetable)");
                 db = db.child("category_2");
                 break;
             case 3:
-                categoryView.setText("Fruits");
+                categoryView.setText("(Fruits)");
                 db = db.child("category_3");
                 break;
             case 4:
-                categoryView.setText("Milk");
+                categoryView.setText("(Milk)");
                 db = db.child("category_4");
                 break;
             case 5:
-                categoryView.setText("Lean Meats");
+                categoryView.setText("(Lean Meats)");
                 db = db.child("category_5");
                 break;
 
@@ -90,7 +90,7 @@ public class ReplacementRanks extends AppCompatActivity {
 
         Query query = null;
 
-        query = db.orderByChild("food_Name").limitToLast(10);
+        query = db.limitToLast(10);
 
         FirebaseRecyclerOptions<NutritionContains> response = new FirebaseRecyclerOptions.Builder<NutritionContains>()
                 .setQuery(query, NutritionContains.class)
@@ -103,6 +103,7 @@ public class ReplacementRanks extends AppCompatActivity {
                 // Bind the Chat object to the Holder
 
                 holder.text_Name.setText(model.getFood_Name());
+
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -138,10 +139,6 @@ public class ReplacementRanks extends AppCompatActivity {
                         intent.putExtra(NutritionShow.EXTRA_ZINC, model.getZinc());
                         intent.putExtra(NutritionShow.EXTRA_CHOLESTEROL, model.getCholesterol());
                         intent.putExtra(NutritionShow.EXTRA_STARCH, model.getStarch());
-
-
-//
-
                         startActivity(intent);
                     }
                 });

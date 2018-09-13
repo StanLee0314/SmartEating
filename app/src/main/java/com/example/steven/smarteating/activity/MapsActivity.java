@@ -34,6 +34,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setTitle("Maps for Fresh Market");
+        mapView = findViewById(R.id.map_view);
+        mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             if (ActivityCompat.checkSelfPermission
@@ -54,9 +57,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //                .findFragmentById(R.id.map);
 //        mapFragment.getMapAsync(this);
 
-        mapView = findViewById(R.id.map_view);
-        mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
 
     }
 

@@ -90,13 +90,75 @@ public class NutritionSearchFragment extends Fragment {
         mSearchField = view.findViewById(R.id.et_title);
         btnSearch = view.findViewById(R.id.btn_search);
         init();
+        initialFoods();
         getBookReciptList("Search here");
         broccoli_cli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                NutritionContains broccoli = new NutritionContains("A0001", "Broccoli", 2, 101, 0.4, 4.7, 3.7, 0.3, 0.4, 0.08, 0.22, 0.5, 0.09, 0, 106, 0.18, 48, 48, 32, 0.5, 0.84, 21, 75, 336, 0.5, 22, 0.6, 0, 0);
                 getResult(broccoli);
             }
         });
+
+        banana_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NutritionContains banana = new NutritionContains("A0006", "Banana", 3, 445, 25, 1.5, 3.7, 0.1, 18.2, 0.04, 0.07, 0.4, 0.2, 0, 19, 0.1, 8, 33, 10, 0.5, 0.4, 38, 21, 320, 0.5, 2, 0.2, 0, 6.8);
+                getResult(banana);
+            }
+        });
+
+        beef_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NutritionContains beef = new NutritionContains("A0003", "Beef", 5, 534, 0, 21.9, 0, 4.4, 0, 0.06, 0.2, 2.97, 0.12, 1, 1, 0.51, 3, 0, 4, 1.2, 1.88, 24, 197, 335, 11.8, 55, 4.49, 45, 0);
+                getResult(beef);
+            }
+        });
+
+        lamb_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NutritionContains lamb = new NutritionContains("A0004", "Lamb", 5, 2315, 0, 10.8, 0, 57.6, 0, 0, 0.07, 2, 0.1, 2.9, 0, 1.1, 34, 0, 5, 0.5, 0.41, 6, 56, 91, 5, 22, 0.54, 62, 0);
+                getResult(lamb);
+            }
+        });
+
+        zucchini_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NutritionContains zucchini = new NutritionContains("A0005", "Zucchini", 2, 56, 1.7, 0.9, 1.1, 0.3, 1.7, 0.03, 0.06, 0.6, 0.03, 0, 24, 0.52, 46, 17, 18, 0.5, 0.5, 16, 34, 188, 0.5, 1, 0.33, 0, 0);
+
+                getResult(zucchini);
+            }
+        });
+
+        pork_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NutritionContains pork = new NutritionContains("A0007", "Pork", 5, 433, 0, 23.1, 0, 1.1, 0, 1.5, 0, 9.7, 0.73, 0.3, 0, 0.31, 0, 32, 4, 0.8, 0.86, 26, 240, 390, 17.5, 42, 1.75, 47, 0);
+                getResult(pork);
+            }
+        });
+
+        tomato_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NutritionContains tomato = new NutritionContains("A0002", "Tomato", 2, 64, 2.4, 1, 1.2, 0.1, 2.3, 0.02, 0.01, 0.7, 0.03, 0, 18, 0.26, 26, 16, 9, 0.3, 0.27, 7, 26, 214, 0.4, 8, 0.31, 0, 0.1);
+
+                getResult(tomato);
+            }
+        });
+
+        avocado_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NutritionContains avocado = new NutritionContains("A0008", "Avocado", 2, 843, 0.4, 1.8, 3, 21.6, 0.4, 0.07, 0.13, 1.8, 0.12, 0, 10, 2.2, 27, 67, 13, 0.5, 0.59, 25, 49, 472, 0.5, 4, 0.52, 0, 0);
+
+                getResult(avocado);
+            }
+        });
+
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -235,14 +297,14 @@ public class NutritionSearchFragment extends Fragment {
     }
 
     public void initialFoods() {
-        NutritionContains broccoli = new NutritionContains();
-        NutritionContains tomato = new NutritionContains();
-        NutritionContains beef = new NutritionContains();
-        NutritionContains lamb = new NutritionContains();
-        NutritionContains zucchini = new NutritionContains();
-        NutritionContains banana = new NutritionContains();
-        NutritionContains pork = new NutritionContains();
-        NutritionContains avocado = new NutritionContains();
+        NutritionContains broccoli = new NutritionContains("A0001", "Broccoli", 2, 101, 0.4, 4.7, 3.7, 0.3, 0.4, 0.08, 0.22, 0.5, 0.09, 0, 106, 0.18, 48, 48, 32, 0.5, 0.84, 21, 75, 336, 0.5, 22, 0.6, 0, 0);
+        NutritionContains tomato = new NutritionContains("A0002", "Tomato", 2, 64, 2.4, 1, 1.2, 0.1, 2.3, 0.02, 0.01, 0.7, 0.03, 0, 18, 0.26, 26, 16, 9, 0.3, 0.27, 7, 26, 214, 0.4, 8, 0.31, 0, 0.1);
+        NutritionContains beef = new NutritionContains("A0003", "Beef", 5, 534, 0, 21.9, 0, 4.4, 0, 0.06, 0.2, 2.97, 0.12, 1, 1, 0.51, 3, 0, 4, 1.2, 1.88, 24, 197, 335, 11.8, 55, 4.49, 45, 0);
+        NutritionContains lamb = new NutritionContains("A0004", "Lamb", 5, 2315, 0, 10.8, 0, 57.6, 0, 0, 0.07, 2, 0.1, 2.9, 0, 1.1, 34, 0, 5, 0.5, 0.41, 6, 56, 91, 5, 22, 0.54, 62, 0);
+        NutritionContains zucchini = new NutritionContains("A0005", "Zucchini", 2, 56, 1.7, 0.9, 1.1, 0.3, 1.7, 0.03, 0.06, 0.6, 0.03, 0, 24, 0.52, 46, 17, 18, 0.5, 0.5, 16, 34, 188, 0.5, 1, 0.33, 0, 0);
+        NutritionContains banana = new NutritionContains("A0006", "Banana", 3, 445, 25, 1.5, 3.7, 0.1, 18.2, 0.04, 0.07, 0.4, 0.2, 0, 19, 0.1, 8, 33, 10, 0.5, 0.4, 38, 21, 320, 0.5, 2, 0.2, 0, 6.8);
+        NutritionContains pork = new NutritionContains("A0007", "Pork", 5, 433, 0, 23.1, 0, 1.1, 0, 1.5, 0, 9.7, 0.73, 0.3, 0, 0.31, 0, 32, 4, 0.8, 0.86, 26, 240, 390, 17.5, 42, 1.75, 47, 0);
+        NutritionContains avocado = new NutritionContains("A0008", "Avocado", 2, 843, 0.4, 1.8, 3, 21.6, 0.4, 0.07, 0.13, 1.8, 0.12, 0, 10, 2.2, 27, 67, 13, 0.5, 0.59, 25, 49, 472, 0.5, 4, 0.52, 0, 0);
 
 
     }

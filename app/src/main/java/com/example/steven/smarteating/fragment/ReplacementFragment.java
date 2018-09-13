@@ -146,11 +146,14 @@ public class ReplacementFragment extends Fragment {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(getActivity(), ReplacementRanks.class);
-                        intent.putExtra(ReplacementRanks.EXTRA_FOODNAME, model.getFood_Name());
-                        intent.putExtra(ReplacementRanks.EXTRA_CATEGORY, model.getCategory());
-                        startActivity(intent);
-
+                        if (model.getCategory() == 0) {
+                            Toast.makeText(getActivity(), "This food does not Belongs to above five categories", Toast.LENGTH_LONG).show();
+                        } else {
+                            Intent intent = new Intent(getActivity(), ReplacementRanks.class);
+                            intent.putExtra(ReplacementRanks.EXTRA_FOODNAME, model.getFood_Name());
+                            intent.putExtra(ReplacementRanks.EXTRA_CATEGORY, model.getCategory());
+                            startActivity(intent);
+                        }
                     }
                 });
 
