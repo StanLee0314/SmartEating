@@ -8,35 +8,30 @@
         android:layout_height="match_parent"
         android:padding="@dimen/tab_padding"
         tools:context="com.example.steven.smarteating.activity.NutritionShow">
-
         <ScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:paddingTop="8dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:fontFamily="@font/roboto"
+                    android:fontFamily="@font/roboto_light"
                     android:paddingBottom="3dp"
                     android:paddingTop="5dp"
                     android:text="Australian guide to healthy eating recommends we enjoy a wide variety of nutritious foods from following FIVE GROUPS every day."
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
-
+                    android:textSize="16sp" />
                 <LinearLayout
                     android:layout_width="350dp"
-                    android:layout_height="115dp"
+                    android:layout_height="125dp"
                     android:paddingBottom="5dp"
                     android:paddingLeft="20dp">
-
                     <ImageView
                         android:layout_width="315dp"
                         android:layout_height="75dp"
@@ -45,32 +40,27 @@
                         android:background="@drawable/group_food"
                         android:scaleType="fitXY" />
                 </LinearLayout>
-
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:background="#A9A9A9"
                     android:paddingLeft="5dp" />
-
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="360dp"
                     android:layout_height="90dp"
                     android:paddingTop="25dp">
-
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
-                        android:fontFamily="@font/roboto"
+                        android:fontFamily="@font/roboto_light"
                         android:paddingBottom="3dp"
-                        android:paddingLeft="5dp"
+                        android:paddingLeft="15dp"
                         android:paddingTop="5dp"
-                        android:text="Food replacements are the top rankings in the same food group."
+                        android:text="Find replacements with similiar nutrition value."
                         android:textColor="#4A4A4A"
-                        android:textSize="18sp" />
-
+                        android:textSize="16sp" />
                 </LinearLayout>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="89dp"
@@ -80,7 +70,6 @@
                     android:paddingRight="35dp"
                     android:weightSum="1"
                     android:paddingTop="10dp">
-
                     <EditText
                         android:id="@+id/replacement_title"
                         android:layout_width="236dp"
@@ -95,7 +84,6 @@
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
                         android:paddingTop="10dp" />
-
                     <Button
                         android:id="@+id/replacement_search"
                         android:layout_width="wrap_content"
@@ -106,12 +94,10 @@
                         android:text="search"
                         android:textColor="@color/textColorPrimary" />
                 </LinearLayout>
-
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_gravity="center">
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -121,24 +107,16 @@
                         android:paddingLeft="@dimen/activity_horizontal_margin"
                         android:paddingRight="@dimen/activity_horizontal_margin"
                         android:paddingTop="@dimen/activity_vertical_margin">
-
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/foodreplacement_rv_list"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_below="@+id/foodsearch_search_field"
                             android:layout_marginTop="2dp">
-
                         </android.support.v7.widget.RecyclerView>
                     </LinearLayout>
-
                 </ScrollView>
-
             </LinearLayout>
-
         </ScrollView>
-
     </FrameLayout>
-
-
 </android.support.constraint.ConstraintLayout>

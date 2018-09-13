@@ -10,37 +10,37 @@ import android.os.Parcelable;
 public class NutritionContains {
     private String food_ID;
     private String food_Name;
-    private Long category;
+    private double category;
 
 
-    private Long energy;
-    private Long carbohydrates;
-    private Long protein;
-    private Long dietary_fibre;
-    private Long total_fat;
-    private Long total_sugars;
-    private Long vitamin_B1;
-    private Long vitamin_B2;
-    private Long vitamin_B3;
-    private Long vitamin_B6;
-    private Long vitamin_B12;
-    private Long vitamin_C;
-    private Long vitamin_E;
-    private Long vitamin_A;
-    private Long total_Folates;
-    private Long calcium;
-    private Long iodine;
-    private Long iron;
+    private double energy;
+    private double carbohydrates;
+    private double protein;
+    private double dietary_fibre;
+    private double total_fat;
+    private double total_sugars;
+    private double vitamin_B1;
+    private double vitamin_B2;
+    private double vitamin_B3;
+    private double vitamin_B6;
+    private double vitamin_B12;
+    private double vitamin_C;
+    private double vitamin_E;
+    private double vitamin_A;
+    private double total_Folates;
+    private double calcium;
+    private double iodine;
+    private double iron;
 
-    public Long getCategory() {
+    public double getCategory() {
         return category;
     }
 
-    public void setCategory(Long category) {
+    public void setCategory(double category) {
         this.category = category;
     }
 
-    public NutritionContains(String food_ID, String food_Name, Long category, Long energy, Long carbohydrates, Long protein, Long dietary_fibre, Long total_fat, Long total_sugars, Long vitamin_B1, Long vitamin_B2, Long vitamin_B3, Long vitamin_B6, Long vitamin_B12, Long vitamin_C, Long vitamin_E, Long vitamin_A, Long total_Folates, Long calcium, Long iodine, Long iron, Long magnesium, Long phosphorus, Long potassium, Long selenium, Long sodium, Long zinc, Long cholesterol, Long starch) {
+    public NutritionContains(String food_ID, String food_Name, double category, double energy, double carbohydrates, double protein, double dietary_fibre, double total_fat, double total_sugars, double vitamin_B1, double vitamin_B2, double vitamin_B3, double vitamin_B6, double vitamin_B12, double vitamin_C, double vitamin_E, double vitamin_A, double total_Folates, double calcium, double iodine, double iron, double magnesium, double phosphorus, double potassium, double selenium, double sodium, double zinc, double cholesterol, double starch) {
         this.food_ID = food_ID;
         this.food_Name = food_Name;
         this.category = category;
@@ -90,222 +90,222 @@ public class NutritionContains {
         this.food_Name = food_Name;
     }
 
-    public Long getEnergy() {
+    public double getEnergy() {
         return energy;
     }
 
-    public void setEnergy(Long energy) {
+    public void setEnergy(Double energy) {
         this.energy = energy;
     }
 
-    public Long getCarbohydrates() {
+    public double getCarbohydrates() {
         return carbohydrates;
     }
 
-    public void setCarbohydrates(Long carbohydrates) {
+    public void setCarbohydrates(double carbohydrates) {
         this.carbohydrates = carbohydrates;
     }
 
-    public Long getProtein() {
+    public double getProtein() {
         return protein;
     }
 
-    public void setProtein(Long protein) {
+    public void setProtein(double protein) {
         this.protein = protein;
     }
 
-    public Long getDietary_fibre() {
+    public double getDietary_fibre() {
         return dietary_fibre;
     }
 
-    public void setDietary_fibre(Long dietary_fibre) {
+    public void setDietary_fibre(double dietary_fibre) {
         this.dietary_fibre = dietary_fibre;
     }
 
-    public Long getTotal_fat() {
+    public double getTotal_fat() {
         return total_fat;
     }
 
-    public void setTotal_fat(Long total_fat) {
+    public void setTotal_fat(double total_fat) {
         this.total_fat = total_fat;
     }
 
-    public Long getTotal_sugars() {
+    public double getTotal_sugars() {
         return total_sugars;
     }
 
-    public void setTotal_sugars(Long total_sugars) {
+    public void setTotal_sugars(double total_sugars) {
         this.total_sugars = total_sugars;
     }
 
-    public Long getVitamin_B1() {
+    public double getVitamin_B1() {
         return vitamin_B1;
     }
 
-    public void setVitamin_B1(Long vitamin_B1) {
+    public void setVitamin_B1(double vitamin_B1) {
         this.vitamin_B1 = vitamin_B1;
     }
 
-    public Long getVitamin_B2() {
+    public double getVitamin_B2() {
         return vitamin_B2;
     }
 
-    public void setVitamin_B2(Long vitamin_B2) {
+    public void setVitamin_B2(double vitamin_B2) {
         this.vitamin_B2 = vitamin_B2;
     }
 
-    public Long getVitamin_B3() {
+    public double getVitamin_B3() {
         return vitamin_B3;
     }
 
-    public void setVitamin_B3(Long vitamin_B3) {
+    public void setVitamin_B3(double vitamin_B3) {
         this.vitamin_B3 = vitamin_B3;
     }
 
-    public Long getVitamin_B6() {
+    public double getVitamin_B6() {
         return vitamin_B6;
     }
 
-    public void setVitamin_B6(Long vitamin_B6) {
+    public void setVitamin_B6(double vitamin_B6) {
         this.vitamin_B6 = vitamin_B6;
     }
 
-    public Long getVitamin_B12() {
+    public double getVitamin_B12() {
         return vitamin_B12;
     }
 
-    public void setVitamin_B12(Long vitamin_B12) {
+    public void setVitamin_B12(double vitamin_B12) {
         this.vitamin_B12 = vitamin_B12;
     }
 
-    public Long getVitamin_C() {
+    public double getVitamin_C() {
         return vitamin_C;
     }
 
-    public void setVitamin_C(Long vitamin_C) {
+    public void setVitamin_C(double vitamin_C) {
         this.vitamin_C = vitamin_C;
     }
 
-    public Long getVitamin_E() {
+    public double getVitamin_E() {
         return vitamin_E;
     }
 
-    public void setVitamin_E(Long vitamin_E) {
+    public void setVitamin_E(double vitamin_E) {
         this.vitamin_E = vitamin_E;
     }
 
-    public Long getVitamin_A() {
+    public double getVitamin_A() {
         return vitamin_A;
     }
 
-    public void setVitamin_A(Long vitamin_A) {
+    public void setVitamin_A(double vitamin_A) {
         this.vitamin_A = vitamin_A;
     }
 
-    public Long getTotal_Folates() {
+    public double getTotal_Folates() {
         return total_Folates;
     }
 
-    public void setTotal_Folates(Long total_Folates) {
+    public void setTotal_Folates(double total_Folates) {
         this.total_Folates = total_Folates;
     }
 
-    public Long getCalcium() {
+    public double getCalcium() {
         return calcium;
     }
 
-    public void setCalcium(Long calcium) {
+    public void setCalcium(double calcium) {
         this.calcium = calcium;
     }
 
-    public Long getIodine() {
+    public double getIodine() {
         return iodine;
     }
 
-    public void setIodine(Long iodine) {
+    public void setIodine(double iodine) {
         this.iodine = iodine;
     }
 
-    public Long getIron() {
+    public double getIron() {
         return iron;
     }
 
-    public void setIron(Long iron) {
+    public void setIron(double iron) {
         this.iron = iron;
     }
 
-    public Long getMagnesium() {
+    public double getMagnesium() {
         return magnesium;
     }
 
-    public void setMagnesium(Long magnesium) {
+    public void setMagnesium(double magnesium) {
         this.magnesium = magnesium;
     }
 
-    public Long getPhosphorus() {
+    public double getPhosphorus() {
         return phosphorus;
     }
 
-    public void setPhosphorus(Long phosphorus) {
+    public void setPhosphorus(double phosphorus) {
         this.phosphorus = phosphorus;
     }
 
-    public Long getPotassium() {
+    public double getPotassium() {
         return potassium;
     }
 
-    public void setPotassium(Long potassium) {
+    public void setPotassium(double potassium) {
         this.potassium = potassium;
     }
 
-    public Long getSelenium() {
+    public double getSelenium() {
         return selenium;
     }
 
-    public void setSelenium(Long selenium) {
+    public void setSelenium(double selenium) {
         this.selenium = selenium;
     }
 
-    public Long getSodium() {
+    public double getSodium() {
         return sodium;
     }
 
-    public void setSodium(Long sodium) {
+    public void setSodium(double sodium) {
         this.sodium = sodium;
     }
 
-    public Long getZinc() {
+    public double getZinc() {
         return zinc;
     }
 
-    public void setZinc(Long zinc) {
+    public void setZinc(double zinc) {
         this.zinc = zinc;
     }
 
-    public Long getCholesterol() {
+    public double getCholesterol() {
         return cholesterol;
     }
 
-    public void setCholesterol(Long cholesterol) {
+    public void setCholesterol(double cholesterol) {
         this.cholesterol = cholesterol;
     }
 
-    public Long getStarch() {
+    public double getStarch() {
         return starch;
     }
 
-    public void setStarch(Long starch) {
+    public void setStarch(double starch) {
         this.starch = starch;
     }
 
-    private Long magnesium;
-    private Long phosphorus;
-    private Long potassium;
-    private Long selenium;
-    private Long sodium;
-    private Long zinc;
-    private Long cholesterol;
-    private Long starch;
+    private double magnesium;
+    private double phosphorus;
+    private double potassium;
+    private double selenium;
+    private double sodium;
+    private double zinc;
+    private double cholesterol;
+    private double starch;
 
     public NutritionContains() {
     }

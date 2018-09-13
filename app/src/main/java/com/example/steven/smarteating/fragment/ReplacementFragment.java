@@ -1,6 +1,8 @@
 package com.example.steven.smarteating.fragment;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -86,7 +89,11 @@ public class ReplacementFragment extends Fragment {
             @Override
             public void onClick(View view) {
 //                Toast.makeText(getActivity(), "Searching......", Toast.LENGTH_LONG).show();
+                try {
+                    hideKeyboard(getActivity());
+                } catch (Exception e) {
 
+                }
                 String searchText = mSearchField.getText().toString();
                 mFirebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
                 getBookReciptList(searchText);
@@ -119,11 +126,6 @@ public class ReplacementFragment extends Fragment {
             Toast.makeText(getActivity(), "Please enter a food name",
                     Toast.LENGTH_LONG).show();
         }
-//        else if (!(searchText.startsWith(".*[a-zA-Z]+.*)"))) {
-//
-//            Toast.makeText(getActivity(), "Input should be started with a word",
-//                    Toast.LENGTH_LONG).show();
-//            query = db.limitToLast(10);
 
         else {
             Toast.makeText(getActivity(), "Searching......", Toast.LENGTH_LONG).show();
@@ -201,5 +203,10 @@ public class ReplacementFragment extends Fragment {
 
     }
 
-
+    public static void hideKeyboard(Context mContext) {
+        InputMethodManager imm = (InputMethodManager) mContext
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(((Activity) mContext).getWindow()
+                .getCurrentFocus().getWindowToken(), 0);
+    }
 }

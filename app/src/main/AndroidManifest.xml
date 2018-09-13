@@ -35,6 +35,11 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".activity.ReplacementRanks"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".activity.NutritionFactsShow"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"

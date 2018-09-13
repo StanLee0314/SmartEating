@@ -1,6 +1,8 @@
 package com.example.steven.smarteating.fragment;
 
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -9,8 +11,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -39,8 +43,33 @@ public class NutritionSearchFragment extends Fragment {
     private EditText mSearchField;
     private FirebaseAnalytics mFirebaseAnalytics;
 
+    private NutritionContains broccoli;
+    private NutritionContains tomato;
+    private NutritionContains banana;
+    private NutritionContains zucchini;
+    private NutritionContains avocado;
+    private NutritionContains beef;
+    private NutritionContains pork;
+    private NutritionContains lamb;
+
     @BindView(R.id.foodsearch_rv_list)
     RecyclerView taskList;
+    @BindView(R.id.broccoli_click)
+    ImageView broccoli_cli;
+    @BindView(R.id.banana_click)
+    ImageView banana_cli;
+    @BindView(R.id.beef_click)
+    ImageView beef_cli;
+    @BindView(R.id.lamb_click)
+    ImageView lamb_cli;
+    @BindView(R.id.zucchini_click)
+    ImageView zucchini_cli;
+    @BindView(R.id.avocado_click)
+    ImageView avocado_cli;
+    @BindView(R.id.pork_click)
+    ImageView pork_cli;
+    @BindView(R.id.tomato_click)
+    ImageView tomato_cli;
 
     private FirebaseRecyclerAdapter adapter;
 
@@ -49,7 +78,6 @@ public class NutritionSearchFragment extends Fragment {
 
     public NutritionSearchFragment() {
 
-        // Required empty public constructor
     }
 
 
@@ -61,26 +89,27 @@ public class NutritionSearchFragment extends Fragment {
         ButterKnife.bind(this, view);
         mSearchField = view.findViewById(R.id.et_title);
         btnSearch = view.findViewById(R.id.btn_search);
-//        view.setBackground(getResources().getDrawable(R.drawable.background2));
-
         init();
-
-
         getBookReciptList("Search here");
-
+        broccoli_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getResult(broccoli);
+            }
+        });
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(getActivity(), "Searching......", Toast.LENGTH_LONG).show();
+                try {
+                    hideKeyboard(getActivity());
+                } catch (Exception e) {
 
+                }
                 String searchText = mSearchField.getText().toString();
                 mFirebaseAnalytics = FirebaseAnalytics.getInstance(getActivity());
                 getBookReciptList(searchText);
-
             }
         });
-
-
         return view;
     }
 
@@ -96,18 +125,12 @@ public class NutritionSearchFragment extends Fragment {
 
         Query query = null;
         if (searchText.equals("Search here")) {
-//            query = db.orderByChild("foodName");
             query = db.limitToLast(10);
         } else if (searchText.trim().isEmpty()) {
             query = db.limitToLast(10);
             Toast.makeText(getActivity(), "Please enter a food name",
                     Toast.LENGTH_LONG).show();
         }
-//        else if (!(searchText.startsWith(".*[a-zA-Z]+.*)"))) {
-//
-//            Toast.makeText(getActivity(), "Input should be started with a word",
-//                    Toast.LENGTH_LONG).show();
-//            query = db.limitToLast(10);
 
         else {
             Toast.makeText(getActivity(), "Searching......", Toast.LENGTH_LONG).show();
@@ -128,10 +151,7 @@ public class NutritionSearchFragment extends Fragment {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        Snackbar.make(taskList, model.getFoodName(), Snackbar.LENGTH_LONG)
-//                                .setAction("Action", null).show();
                         Intent intent = new Intent(getActivity(), NutritionShow.class);
-//
                         intent.putExtra(NutritionShow.EXTRA_FOODNAME, model.getFood_Name());
                         intent.putExtra(NutritionShow.EXTRA_ENERGY, model.getEnergy());
                         intent.putExtra(NutritionShow.EXTRA_CARBOHYDRATES, model.getCarbohydrates());
@@ -159,10 +179,6 @@ public class NutritionSearchFragment extends Fragment {
                         intent.putExtra(NutritionShow.EXTRA_ZINC, model.getZinc());
                         intent.putExtra(NutritionShow.EXTRA_CHOLESTEROL, model.getCholesterol());
                         intent.putExtra(NutritionShow.EXTRA_STARCH, model.getStarch());
-
-
-//
-
                         startActivity(intent);
                     }
                 });
@@ -180,13 +196,8 @@ public class NutritionSearchFragment extends Fragment {
 
 
         };
-
         adapter.notifyDataSetChanged();
-
-
         taskList.setAdapter(adapter);
-
-
     }
 
 
@@ -216,4 +227,56 @@ public class NutritionSearchFragment extends Fragment {
 
     }
 
+    public static void hideKeyboard(Context mContext) {
+        InputMethodManager imm = (InputMethodManager) mContext
+                .getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(((Activity) mContext).getWindow()
+                .getCurrentFocus().getWindowToken(), 0);
+    }
+
+    public void initialFoods() {
+        NutritionContains broccoli = new NutritionContains();
+        NutritionContains tomato = new NutritionContains();
+        NutritionContains beef = new NutritionContains();
+        NutritionContains lamb = new NutritionContains();
+        NutritionContains zucchini = new NutritionContains();
+        NutritionContains banana = new NutritionContains();
+        NutritionContains pork = new NutritionContains();
+        NutritionContains avocado = new NutritionContains();
+
+
+    }
+
+    public void getResult(NutritionContains model) {
+        Intent intent = new Intent(getActivity(), NutritionShow.class);
+        intent.putExtra(NutritionShow.EXTRA_FOODNAME, model.getFood_Name());
+        intent.putExtra(NutritionShow.EXTRA_ENERGY, model.getEnergy());
+        intent.putExtra(NutritionShow.EXTRA_CARBOHYDRATES, model.getCarbohydrates());
+        intent.putExtra(NutritionShow.EXTRA_PROTEIN, model.getProtein());
+        intent.putExtra(NutritionShow.EXTRA_DIETARYFIBRE, model.getDietary_fibre());
+        intent.putExtra(NutritionShow.EXTRA_TOTALFAT, model.getTotal_fat());
+        intent.putExtra(NutritionShow.EXTRA_TOTALSUGARS, model.getTotal_sugars());
+        intent.putExtra(NutritionShow.EXTRA_B1, model.getVitamin_B1());
+        intent.putExtra(NutritionShow.EXTRA_B2, model.getVitamin_B2());
+        intent.putExtra(NutritionShow.EXTRA_B3, model.getVitamin_B3());
+        intent.putExtra(NutritionShow.EXTRA_B6, model.getVitamin_B6());
+        intent.putExtra(NutritionShow.EXTRA_B12, model.getVitamin_B12());
+        intent.putExtra(NutritionShow.EXTRA_C, model.getVitamin_C());
+        intent.putExtra(NutritionShow.EXTRA_E, model.getVitamin_E());
+        intent.putExtra(NutritionShow.EXTRA_A, model.getVitamin_A());
+        intent.putExtra(NutritionShow.EXTRA_FOLATES, model.getTotal_Folates());
+        intent.putExtra(NutritionShow.EXTRA_CALCIUM, model.getCalcium());
+        intent.putExtra(NutritionShow.EXTRA_IODINE, model.getIodine());
+        intent.putExtra(NutritionShow.EXTRA_IRON, model.getIron());
+        intent.putExtra(NutritionShow.EXTRA_MAGNESIUM, model.getMagnesium());
+        intent.putExtra(NutritionShow.EXTRA_PHOSPHORUS, model.getPhosphorus());
+        intent.putExtra(NutritionShow.EXTRA_POTASSIUM, model.getPotassium());
+        intent.putExtra(NutritionShow.EXTRA_SELENIUM, model.getSelenium());
+        intent.putExtra(NutritionShow.EXTRA_SODIUM, model.getSodium());
+        intent.putExtra(NutritionShow.EXTRA_ZINC, model.getZinc());
+        intent.putExtra(NutritionShow.EXTRA_CHOLESTEROL, model.getCholesterol());
+        intent.putExtra(NutritionShow.EXTRA_STARCH, model.getStarch());
+        startActivity(intent);
+    }
 }
+

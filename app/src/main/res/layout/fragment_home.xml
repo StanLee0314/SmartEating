@@ -1,6 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="@dimen/tab_padding"
+    tools:context="com.example.steven.smarteating.activity.NutritionShow">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="280dp"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp">
+
+                <ImageButton
+                    android:id="@+id/the_five_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/the_five_group"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/eating_suggestion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="130dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/eating_suggestion"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:paddingTop="20dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="#D6D3D7"
+                android:paddingLeft="5dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="317dp"
+            android:layout_height="42dp"
+            android:paddingBottom="20dp">
+
+            <TableLayout
+                android:layout_width="317dp"
+                android:layout_height="match_parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/roboto"
+                        android:text="Healthy Recipe"
+                        android:textColor="#000"
+                        android:textSize="15sp" />
+
+                    <Button
+                        android:id="@+id/btn_search"
+                        android:layout_width="255dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.1"
+                        android:background="@drawable/layout_button_more"
+                        android:text="MORE"
+                        android:textColor="#4AAC4E" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp">
+
+                <ImageButton
+                    android:id="@+id/carrot_muffins"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:paddingRight="15dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/carrot_muffins"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp">
+
+                <ImageButton
+                    android:id="@+id/salsa"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:paddingRight="15dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/salsa"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/citrus_coleslaw"
+                    android:layout_width="100dp"
+                    android:layout_height="120dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/citrus_coleslaw"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>
