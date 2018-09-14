@@ -27,7 +27,7 @@
                     android:layout_gravity="start"
                     android:fontFamily="@font/roboto"
                     android:textColor="#000"
-                    android:textSize="25sp" />
+                    android:textSize="23sp" />
 
                 <TextView
                     android:text="Per 100g"
@@ -70,7 +70,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/macronutrients"
                     android:textColor="#000"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
             </TableRow>
 
             <TableRow android:layout_width="wrap_content">
@@ -84,7 +84,7 @@
                     android:text="@string/energy"
                     android:textColor="#4A4A4A"
 
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_energy"
@@ -95,7 +95,7 @@
                     android:textColor="#4A4A4A"
 
 
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
             </TableRow>
 
             <TableRow android:layout_width="wrap_content">
@@ -108,7 +108,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/carbohydrates"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_carbohydrates"
@@ -117,7 +117,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -132,7 +132,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/protein"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
                 <TextView
                     android:id="@+id/input_protein"
                     android:layout_width="wrap_content"
@@ -140,7 +140,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -156,7 +156,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/dietaryFibre"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_dietaryFibre"
@@ -165,7 +165,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -180,7 +180,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/totalFat"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_totalFat"
@@ -189,7 +189,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -204,7 +204,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/totalSugars"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_totalSugars"
@@ -213,7 +213,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -228,7 +228,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/cholesterol"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_cholesterol"
@@ -237,7 +237,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -252,7 +252,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/starch"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_starch"
@@ -261,7 +261,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
             </TableRow>
 
             <View
@@ -292,7 +292,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/vitamins"
                     android:textColor="#000"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
             </TableRow>
 
             <TableRow>
@@ -305,7 +305,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/b1"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_b1"
@@ -314,7 +314,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -329,7 +329,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/b2"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_b2"
@@ -338,7 +338,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -353,7 +353,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/b3"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_b3"
@@ -362,7 +362,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -377,7 +377,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/b6"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_b6"
@@ -386,7 +386,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -401,7 +401,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/b12"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_b12"
@@ -410,7 +410,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -425,7 +425,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/c"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_c"
@@ -434,7 +434,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -449,7 +449,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/e"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_e"
@@ -458,7 +458,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -473,7 +473,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/a"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_a"
@@ -482,7 +482,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -497,7 +497,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/folates"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_folates"
@@ -506,7 +506,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
                     />
             </TableRow>
 
@@ -540,7 +540,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/minerals"
                     android:textColor="#000"
-                    android:textSize="22sp" />
+                    android:textSize="20sp" />
             </TableRow>
 
             <TableRow>
@@ -553,7 +553,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/calcium"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_calcium"
@@ -562,7 +562,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -577,7 +577,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/iodine"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_iodine"
@@ -586,7 +586,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -601,7 +601,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/iron"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_iron"
@@ -610,7 +610,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -625,7 +625,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/magnesium"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_magnesium"
@@ -634,7 +634,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -649,7 +649,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/phosphorus"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_phosphorus"
@@ -658,7 +658,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -673,7 +673,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/potassium"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_potassium"
@@ -682,7 +682,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -697,7 +697,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/selenium"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_selenium"
@@ -706,7 +706,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -721,7 +721,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/sodium"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_sodium"
@@ -730,7 +730,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>
@@ -745,7 +745,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/zinc"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp" />
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/input_zinc"
@@ -754,7 +754,7 @@
                     android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
                     android:textColor="#4A4A4A"
-                    android:textSize="18sp"
+                    android:textSize="17sp"
 
                     />
             </TableRow>

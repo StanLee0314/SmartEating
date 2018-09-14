@@ -35,10 +35,9 @@ public class NutritionFactsShow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nutritionfacts_show);
         ButterKnife.bind(this);
+        //get the value of the fragment
         imageView.setImageResource(getIntent().getIntExtra(IMAGE_RES_ID, R.drawable.vitamin_a_click));
-//        int b = getIntent().getIntExtra(INTRODUCTION_RES_ID,R.drawable.introduction_va);
         introductionView.setImageResource(getIntent().getIntExtra(INTRODUCTION_RES_ID, R.drawable.introduction_va));
-//        int c = getIntent().getIntExtra(TABLE_RES_ID,R.drawable.vitamin_a_table);
         tableView.setImageResource(getIntent().getIntExtra(TABLE_RES_ID, R.drawable.vitamin_a_table));
         titleView.setText(getIntent().getStringExtra(NAME_RES_ID));
     }

@@ -77,18 +77,17 @@ public class ReplacementFragment extends Fragment {
         ButterKnife.bind(this, view);
         mSearchField = view.findViewById(R.id.replacement_title);
         btnSearch = view.findViewById(R.id.replacement_search);
-//        view.setBackground(getResources().getDrawable(R.drawable.background2));
 
         init();
 
 
         getBookReciptList("Search here");
 
-
+//    search button function
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Toast.makeText(getActivity(), "Searching......", Toast.LENGTH_LONG).show();
+
                 try {
                     hideKeyboard(getActivity());
                 } catch (Exception e) {
@@ -119,10 +118,10 @@ public class ReplacementFragment extends Fragment {
 
         Query query = null;
         if (searchText.equals("Search here")) {
-//            query = db.orderByChild("foodName");
-            query = db.limitToLast(10);
+            query = db.limitToFirst(10);
+            //validation here
         } else if (searchText.trim().isEmpty()) {
-            query = db.limitToLast(10);
+            query = db.limitToFirst(10);
             Toast.makeText(getActivity(), "Please enter a food name",
                     Toast.LENGTH_LONG).show();
         }
@@ -147,11 +146,12 @@ public class ReplacementFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (model.getCategory() == 0) {
-                            Toast.makeText(getActivity(), "This food does not Belongs to above five categories", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), "This food does not belongs to above five categories", Toast.LENGTH_LONG).show();
                         } else {
                             Intent intent = new Intent(getActivity(), ReplacementRanks.class);
                             intent.putExtra(ReplacementRanks.EXTRA_FOODNAME, model.getFood_Name());
                             intent.putExtra(ReplacementRanks.EXTRA_CATEGORY, model.getCategory());
+
                             startActivity(intent);
                         }
                     }
@@ -206,6 +206,7 @@ public class ReplacementFragment extends Fragment {
 
     }
 
+    //   hide virtual keyboard function
     public static void hideKeyboard(Context mContext) {
         InputMethodManager imm = (InputMethodManager) mContext
                 .getSystemService(Context.INPUT_METHOD_SERVICE);

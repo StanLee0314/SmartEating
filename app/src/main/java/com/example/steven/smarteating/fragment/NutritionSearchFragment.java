@@ -92,6 +92,7 @@ public class NutritionSearchFragment extends Fragment {
         init();
         initialFoods();
         getBookReciptList("Search here");
+        //image click function
         broccoli_cli.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -158,7 +159,7 @@ public class NutritionSearchFragment extends Fragment {
                 getResult(avocado);
             }
         });
-
+// search button fuction
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -175,7 +176,7 @@ public class NutritionSearchFragment extends Fragment {
         return view;
     }
 
-
+    // initial the database setting
     private void init() {
         taskList.setLayoutManager(new LinearLayoutManager(getActivity()));
 
@@ -187,9 +188,9 @@ public class NutritionSearchFragment extends Fragment {
 
         Query query = null;
         if (searchText.equals("Search here")) {
-            query = db.limitToLast(10);
+            query = db.limitToFirst(10);
         } else if (searchText.trim().isEmpty()) {
-            query = db.limitToLast(10);
+            query = db.limitToFirst(10);
             Toast.makeText(getActivity(), "Please enter a food name",
                     Toast.LENGTH_LONG).show();
         }
@@ -209,7 +210,7 @@ public class NutritionSearchFragment extends Fragment {
                 // Bind the Chat object to the Holder
 
                 holder.text_Name.setText(model.getFood_Name());
-
+//  click function for the list
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -289,6 +290,7 @@ public class NutritionSearchFragment extends Fragment {
 
     }
 
+    // hide virtual keyboard function
     public static void hideKeyboard(Context mContext) {
         InputMethodManager imm = (InputMethodManager) mContext
                 .getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -296,6 +298,7 @@ public class NutritionSearchFragment extends Fragment {
                 .getCurrentFocus().getWindowToken(), 0);
     }
 
+    // initial the local data
     public void initialFoods() {
         NutritionContains broccoli = new NutritionContains("A0001", "Broccoli", 2, 101, 0.4, 4.7, 3.7, 0.3, 0.4, 0.08, 0.22, 0.5, 0.09, 0, 106, 0.18, 48, 48, 32, 0.5, 0.84, 21, 75, 336, 0.5, 22, 0.6, 0, 0);
         NutritionContains tomato = new NutritionContains("A0002", "Tomato", 2, 64, 2.4, 1, 1.2, 0.1, 2.3, 0.02, 0.01, 0.7, 0.03, 0, 18, 0.26, 26, 16, 9, 0.3, 0.27, 7, 26, 214, 0.4, 8, 0.31, 0, 0.1);
@@ -309,6 +312,7 @@ public class NutritionSearchFragment extends Fragment {
 
     }
 
+    // get the information of image food
     public void getResult(NutritionContains model) {
         Intent intent = new Intent(getActivity(), NutritionShow.class);
         intent.putExtra(NutritionShow.EXTRA_FOODNAME, model.getFood_Name());

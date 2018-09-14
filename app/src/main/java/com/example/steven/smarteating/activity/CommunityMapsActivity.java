@@ -25,7 +25,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class CommunityMapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private MapView mapView;
 
@@ -52,12 +52,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         }
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-//                .findFragmentById(R.id.map);
-//        mapFragment.getMapAsync(this);
-
-
     }
 
 
@@ -75,25 +69,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference("smartEating").child("freshMarket");
+        DatabaseReference ref = database.getReference("smartEating").child("communityGarden");
         if (ContextCompat.checkSelfPermission(getApplication(), Manifest.permission.ACCESS_FINE_LOCATION)
-                                == PackageManager.PERMISSION_GRANTED) {
-                            mMap.setMyLocationEnabled(true);
-                        } else {
-                            Toast.makeText(MapsActivity.this, "You have to accept to enjoy all app's services!", Toast.LENGTH_LONG).show();
-                            if (ContextCompat.checkSelfPermission(getApplication(), Manifest.permission.ACCESS_FINE_LOCATION)
-                                    == PackageManager.PERMISSION_GRANTED) {
-                                mMap.setMyLocationEnabled(true);
-                            }
-                        }
-                        //test
-                        mMap.setMyLocationEnabled(true);
-                        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+                == PackageManager.PERMISSION_GRANTED) {
+            mMap.setMyLocationEnabled(true);
+        } else {
+            Toast.makeText(CommunityMapsActivity.this, "You have to accept to enjoy all app's services!", Toast.LENGTH_LONG).show();
+            if (ContextCompat.checkSelfPermission(getApplication(), Manifest.permission.ACCESS_FINE_LOCATION)
+                    == PackageManager.PERMISSION_GRANTED) {
+                mMap.setMyLocationEnabled(true);
+            }
+        }
+        //test
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
 
-                        //move
-                        LatLng home = new LatLng(-37.8, 144.9);
+        //move
+        LatLng home = new LatLng(-37.8, 144.9);
 
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 12));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 12));
 // Attach a listener to read the data at our posts reference
         ref.addValueEventListener(new ValueEventListener() {
             @Override
@@ -149,12 +143,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onLowMemory();
         mapView.onLowMemory();
     }
-
-
-
-
-
-
 
 
 }

@@ -44,7 +44,7 @@ public class UndernutritionFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_undernurition, container, false);
-        view.setBackground(getResources().getDrawable(R.drawable.background3));
+//        imageButton set link
         imageView_va = view.findViewById(R.id.vitamin_a_click);
         imageView_va.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -107,7 +107,7 @@ public class NutritionShow extends AppCompatActivity {
         setContentView(R.layout.nutritiondetail);
 
         ButterKnife.bind(this);
-
+// get the value from the fragment
         String mfoodname = getIntent().getStringExtra(EXTRA_FOODNAME);
         Double menergy = getIntent().getDoubleExtra(EXTRA_ENERGY, 0.0);
         double mcarbohyrates = getIntent().getDoubleExtra(EXTRA_CARBOHYDRATES, 0.0);
@@ -136,7 +136,8 @@ public class NutritionShow extends AppCompatActivity {
         double mcholesterol = getIntent().getDoubleExtra(EXTRA_CHOLESTEROL, 0.0);
         double mstarch = getIntent().getDoubleExtra(EXTRA_STARCH, 0.0);
         String[] arr = mfoodname.split(",");
-        foodName.setText(arr[0].toUpperCase());
+        String[] foodNameShow = arr[0].split(" ");
+        foodName.setText(foodNameShow[0].toUpperCase());
         energy.setText(menergy.toString());
         carbohydrates.setText(String.valueOf(mcarbohyrates));
         protein.setText(String.valueOf(mprotein));

@@ -52,6 +52,7 @@ public class ReplacementRanks extends AppCompatActivity {
         Double menergy = getIntent().getDoubleExtra(EXTRA_CATEGORY, 0);
         init();
         int i = (int) Math.round(menergy);
+        // get the category number of food
         switch (i) {
             case 1:
                 categoryView.setText("(Grains)");
@@ -79,6 +80,7 @@ public class ReplacementRanks extends AppCompatActivity {
 
     }
 
+    // initial the database
     private void init() {
         taskList.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
 
@@ -90,7 +92,7 @@ public class ReplacementRanks extends AppCompatActivity {
 
         Query query = null;
 
-        query = db.limitToLast(10);
+        query = db.limitToFirst(20);
 
         FirebaseRecyclerOptions<NutritionContains> response = new FirebaseRecyclerOptions.Builder<NutritionContains>()
                 .setQuery(query, NutritionContains.class)
@@ -102,14 +104,13 @@ public class ReplacementRanks extends AppCompatActivity {
             public void onBindViewHolder(ReplacementRanks.BookReciptsHolder holder, int position, final NutritionContains model) {
                 // Bind the Chat object to the Holder
 
-                holder.text_Name.setText(model.getFood_Name());
+                holder.text_Name.setText(model.getFood_ID() + "  " + model.getFood_Name());
 
-
+// click function to start new activity
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-//                        Snackbar.make(taskList, model.getFoodName(), Snackbar.LENGTH_LONG)
-//                                .setAction("Action", null).show();
+
                         Intent intent = new Intent(getApplication(), NutritionShow.class);
 //
                         intent.putExtra(NutritionShow.EXTRA_FOODNAME, model.getFood_Name());

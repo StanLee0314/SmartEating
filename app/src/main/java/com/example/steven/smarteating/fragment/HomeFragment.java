@@ -14,8 +14,8 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 
 /**
  * A simple {@link Fragment} subclass.
- * use AsyncTask, toast
- * This fragement is for showing category of nutrition
+ *
+ * This fragement is for showing homepage
  */
 public class HomeFragment extends Fragment {
 
@@ -31,7 +31,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
-        view.setBackground(getResources().getDrawable(R.drawable.background3));
+//        view.setBackground(getResources().getDrawable(R.drawable.background3));
         return view;
     }
 }

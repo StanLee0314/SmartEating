@@ -2,8 +2,7 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/background3">
+    android:layout_height="match_parent">
 
 
     <ScrollView
@@ -22,9 +21,9 @@
                 android:layout_gravity="center"
                 android:paddingBottom="5dp"
                 android:paddingTop="10dp"
-                android:text="The Chosen Undernutrition"
+                android:text="The chosen undernutrition"
                 android:textColor="#000"
-                android:textSize="15sp" />
+                android:textSize="16sp" />
 
 
             <ImageView
@@ -41,7 +40,7 @@
             <ImageView
                 android:id="@+id/introduction"
                 android:layout_width="330dp"
-                android:layout_height="110dp"
+                android:layout_height="98dp"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
                 android:padding="1dp"
@@ -56,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:paddingBottom="10dp"
-                android:paddingTop="10dp"
+                android:paddingTop="13dp"
                 android:textColor="#000"
                 android:textSize="15sp" />
 
