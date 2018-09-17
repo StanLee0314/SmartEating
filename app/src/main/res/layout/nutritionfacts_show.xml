@@ -21,8 +21,9 @@
                 android:layout_gravity="center"
                 android:paddingBottom="5dp"
                 android:paddingTop="10dp"
-                android:text="The chosen undernutrition"
-                android:textColor="#000"
+                android:fontFamily="@font/roboto"
+                android:text="The micronutrient you chose is"
+                android:textColor="#4A4A4A"
                 android:textSize="16sp" />
 
 
@@ -55,9 +56,10 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:paddingBottom="10dp"
-                android:paddingTop="13dp"
-                android:textColor="#000"
-                android:textSize="15sp" />
+                android:paddingTop="35dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="#4A4A4A"
+                android:textSize="16sp" />
 
 
             <ImageView
@@ -77,7 +79,3 @@
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
 
-
-    <!--android:text="VitaminB is used by all yout cells and responsible for helping convert food into energy"--><!--android:text="Symptoms: appeetite loss, weakness, limbs pain"--><!--<TextView--><!--android:id="@+id/introduction_1"--><!--android:layout_height="wrap_content"--><!--android:layout_width="wrap_content"--><!--android:layout_gravity="center"--><!--android:textColor="#000"--><!--android:textSize="15sp"--><!--android:paddingLeft="20dp"--><!--/>-->
-
-    <!--<TextView--><!--android:id="@+id/introduction_2"--><!--android:layout_height="wrap_content"--><!--android:layout_width="wrap_content"--><!--android:layout_gravity="center"--><!--android:textColor="#000"--><!--android:textSize="15sp"--><!--android:paddingBottom="10dp"--><!--/>-->

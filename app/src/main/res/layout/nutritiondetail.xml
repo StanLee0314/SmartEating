@@ -9,17 +9,21 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
 
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
-            android:stretchColumns="1"
-            android:paddingLeft="60dp"
-            android:paddingRight="60dp">
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:stretchColumns="1">
 
             <TableRow>
+
                 <TextView
                     android:id="@+id/input_foodName"
                     android:layout_width="wrap_content"
@@ -30,12 +34,12 @@
                     android:textSize="23sp" />
 
                 <TextView
-                    android:text="Per 100g"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:fontFamily="@font/roboto"
                     android:paddingTop="5dp"
+                    android:text="Per 100g"
                     android:textColor="#4A4A4A"
                     android:textSize="15sp" />
 
@@ -45,10 +49,10 @@
             <TableRow>
 
                 <TextView
-                    android:text=""
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_gravity="start"
+                    android:text=""
                     android:textColor="#4A4A4A"
                     android:textSize="25sp" />
             </TableRow>
@@ -59,8 +63,7 @@
                 android:background="#4A4A4A" />
 
 
-            <TableRow
-                android:layout_margin="0.5dip">
+            <TableRow android:layout_margin="0.5dip">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -114,8 +117,8 @@
                     android:id="@+id/input_carbohydrates"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -133,12 +136,13 @@
                     android:text="@string/protein"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp" />
+
                 <TextView
                     android:id="@+id/input_protein"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -162,8 +166,8 @@
                     android:id="@+id/input_dietaryFibre"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -186,8 +190,8 @@
                     android:id="@+id/input_totalFat"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -210,8 +214,8 @@
                     android:id="@+id/input_totalSugars"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -234,8 +238,8 @@
                     android:id="@+id/input_cholesterol"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -258,8 +262,8 @@
                     android:id="@+id/input_starch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp" />
             </TableRow>
@@ -275,14 +279,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_gravity="start"
+                    android:paddingLeft="5dp"
                     android:text=""
                     android:textColor="#4A4A4A"
-                    android:textSize="25sp"
-                    android:paddingLeft="5dp" />
+                    android:textSize="25sp" />
             </TableRow>
 
-            <TableRow
-                android:layout_margin="0.5dip">
+            <TableRow android:layout_margin="0.5dip">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -311,8 +314,8 @@
                     android:id="@+id/input_b1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -335,8 +338,8 @@
                     android:id="@+id/input_b2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -359,8 +362,8 @@
                     android:id="@+id/input_b3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -383,8 +386,8 @@
                     android:id="@+id/input_b6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -407,8 +410,8 @@
                     android:id="@+id/input_b12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -431,8 +434,8 @@
                     android:id="@+id/input_c"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -455,8 +458,8 @@
                     android:id="@+id/input_e"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -479,8 +482,8 @@
                     android:id="@+id/input_a"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -503,11 +506,10 @@
                     android:id="@+id/input_folates"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
-                    android:textSize="17sp"
-                    />
+                    android:textSize="17sp" />
             </TableRow>
 
             <View
@@ -521,10 +523,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_gravity="start"
+                    android:paddingLeft="5dp"
                     android:text=""
                     android:textColor="#4A4A4A"
-                    android:textSize="25sp"
-                    android:paddingLeft="5dp" />
+                    android:textSize="25sp" />
             </TableRow>
 
 
@@ -559,8 +561,8 @@
                     android:id="@+id/input_calcium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -583,8 +585,8 @@
                     android:id="@+id/input_iodine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -607,8 +609,8 @@
                     android:id="@+id/input_iron"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -631,8 +633,8 @@
                     android:id="@+id/input_magnesium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -655,8 +657,8 @@
                     android:id="@+id/input_phosphorus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -679,8 +681,8 @@
                     android:id="@+id/input_potassium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -703,8 +705,8 @@
                     android:id="@+id/input_selenium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -727,8 +729,8 @@
                     android:id="@+id/input_sodium"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
@@ -751,14 +753,30 @@
                     android:id="@+id/input_zinc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
                     android:layout_gravity="end"
+                    android:fontFamily="@font/roboto_light"
                     android:textColor="#4A4A4A"
                     android:textSize="17sp"
 
                     />
             </TableRow>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="40dp">
+
+                <ImageButton
+                    android:id="@+id/jump_to_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/jump_to_map"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
 
         </TableLayout>
 

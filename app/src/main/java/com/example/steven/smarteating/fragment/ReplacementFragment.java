@@ -146,7 +146,7 @@ public class ReplacementFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         if (model.getCategory() == 0) {
-                            Toast.makeText(getActivity(), "This food does not belongs to above five categories", Toast.LENGTH_LONG).show();
+                            Toast.makeText(getActivity(), "This food does not belong to above five categories", Toast.LENGTH_LONG).show();
                         } else {
                             Intent intent = new Intent(getActivity(), ReplacementRanks.class);
                             intent.putExtra(ReplacementRanks.EXTRA_FOODNAME, model.getFood_Name());

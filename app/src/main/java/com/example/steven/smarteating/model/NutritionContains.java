@@ -11,8 +11,6 @@ public class NutritionContains {
     private String food_ID;
     private String food_Name;
     private double category;
-
-
     private double energy;
     private double carbohydrates;
     private double protein;

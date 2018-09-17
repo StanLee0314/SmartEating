@@ -16,12 +16,29 @@
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text="Please choose your undernutrition"
-                android:textSize="15sp"
+                android:text="Nowadays micronutrient deficiency is very common and it affects nearly one in every people."
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto"
                 android:layout_gravity="center"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
-                android:textColor="#000"
+                android:paddingLeft="18dp"
+                android:textColor="#4A4A4A"
+
+                />
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Choose the micronutrient you want to obtain more from daily diet:"
+                android:textSize="16sp"
+                android:fontFamily="@font/roboto"
+                android:layout_gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingLeft="18dp"
+                android:textColor="#4A4A4A"
 
                 />
 
@@ -38,34 +55,22 @@
                     android:layout_weight="4">
 
                     <ImageView
-                        android:id="@+id/iron_click"
+                        android:id="@+id/vitamin_a_click"
                         android:clickable="true"
                         android:layout_width="150dp"
-                        android:layout_height="120dp"
+                        android:layout_height="95dp"
                         android:adjustViewBounds="true"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
                         android:padding="1dp"
-                        android:background="@drawable/iron"
-                        android:paddingBottom="10dp" />
-
-                    <ImageView
-                        android:id="@+id/vitamin_b1_click"
-                        android:clickable="true"
-                        android:layout_width="150dp"
-                        android:layout_height="120dp"
-                        android:adjustViewBounds="true"
-                        android:layout_gravity="center"
-                        android:scaleType="fitXY"
-                        android:padding="1dp"
-                        android:background="@drawable/vitamin_b1"
+                        android:background="@drawable/vitamin_a"
                         android:paddingBottom="10dp" />
 
                     <ImageView
                         android:id="@+id/vitamin_b6_click"
                         android:clickable="true"
                         android:layout_width="150dp"
-                        android:layout_height="120dp"
+                        android:layout_height="95dp"
                         android:adjustViewBounds="true"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
@@ -77,12 +82,24 @@
                         android:id="@+id/vitamin_c_click"
                         android:clickable="true"
                         android:layout_width="150dp"
-                        android:layout_height="120dp"
+                        android:layout_height="95dp"
                         android:adjustViewBounds="true"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
                         android:padding="1dp"
-                        android:background="@drawable/vitamin_c" />
+                        android:background="@drawable/vitamin_c"
+                        android:paddingBottom="10dp" />
+
+                    <ImageView
+                        android:id="@+id/calcium_click"
+                        android:clickable="true"
+                        android:layout_width="150dp"
+                        android:layout_height="95dp"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:padding="1dp"
+                        android:background="@drawable/calcium" />
 
                 </LinearLayout>
 
@@ -94,32 +111,21 @@
                     android:layout_weight="4">
 
                     <ImageView
-                        android:id="@+id/vitamin_a_click"
+                        android:id="@+id/vitamin_b1_click"
                         android:clickable="true"
                         android:layout_width="150dp"
-                        android:layout_height="120dp"
+                        android:layout_height="95dp"
                         android:adjustViewBounds="true"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
-                        android:background="@drawable/vitamin_a"
-                        android:paddingBottom="10dp" />
-
-                    <ImageView
-                        android:id="@+id/vitamin_e_click"
-                        android:clickable="true"
-                        android:layout_width="150dp"
-                        android:layout_height="120dp"
-                        android:adjustViewBounds="true"
-                        android:layout_gravity="center"
-                        android:scaleType="fitXY"
-                        android:background="@drawable/vitamin_e"
+                        android:background="@drawable/vitamin_b1"
                         android:paddingBottom="10dp" />
 
                     <ImageView
                         android:id="@+id/vitamin_b12_click"
                         android:clickable="true"
                         android:layout_width="150dp"
-                        android:layout_height="120dp"
+                        android:layout_height="95dp"
                         android:adjustViewBounds="true"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
@@ -127,14 +133,25 @@
                         android:paddingBottom="10dp" />
 
                     <ImageView
-                        android:id="@+id/calcium_click"
+                        android:id="@+id/vitamin_e_click"
                         android:clickable="true"
                         android:layout_width="150dp"
-                        android:layout_height="120dp"
+                        android:layout_height="95dp"
                         android:adjustViewBounds="true"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
-                        android:background="@drawable/calcium" />
+                        android:background="@drawable/vitamin_e"
+                        android:paddingBottom="10dp" />
+
+                    <ImageView
+                        android:id="@+id/iron_click"
+                        android:clickable="true"
+                        android:layout_width="150dp"
+                        android:layout_height="95dp"
+                        android:adjustViewBounds="true"
+                        android:layout_gravity="center"
+                        android:scaleType="fitXY"
+                        android:background="@drawable/iron" />
 
 
                 </LinearLayout>

@@ -115,7 +115,7 @@
                 <ImageButton
                     android:id="@+id/carrot_muffins"
                     android:layout_width="100dp"
-                    android:layout_height="120dp"
+                    android:layout_height="125dp"
                     android:paddingRight="15dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/carrot_muffins"
@@ -132,7 +132,7 @@
                 <ImageButton
                     android:id="@+id/salsa"
                     android:layout_width="100dp"
-                    android:layout_height="120dp"
+                    android:layout_height="125dp"
                     android:paddingRight="15dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/salsa"
@@ -148,7 +148,7 @@
                 <ImageButton
                     android:id="@+id/citrus_coleslaw"
                     android:layout_width="100dp"
-                    android:layout_height="120dp"
+                    android:layout_height="125dp"
                     android:adjustViewBounds="true"
                     android:background="@drawable/citrus_coleslaw"
                     android:clickable="true"

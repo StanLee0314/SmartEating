@@ -21,7 +21,7 @@
         <item
             android:id="@+id/overcomeUndernutrition"
             android:icon="@drawable/overcome_undernutrition"
-            android:title="Overcome Undernutrition" />
+            android:title="Beneficial Micronutrients" />
 
         <item
             android:id="@+id/planting"
@@ -35,11 +35,11 @@
         <item
             android:id="@+id/nearbyMarket"
             android:icon="@drawable/nearby_market"
-            android:title="Nearby Market" />
+            android:title="Nearby Fresh Markets" />
         <item
             android:id="@+id/communityGargen"
             android:icon="@drawable/community_garden"
-            android:title="Nearby Community Garden" />
+            android:title="Nearby Community Gardens" />
     </group>
 
 </menu>

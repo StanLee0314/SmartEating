@@ -91,7 +91,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         mMap.getUiSettings().setMyLocationButtonEnabled(true);
 
                         //move
-                        LatLng home = new LatLng(-37.8, 144.9);
+        LatLng home = new LatLng(-37.901, 145.023);
 
                         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 12));
 // Attach a listener to read the data at our posts reference

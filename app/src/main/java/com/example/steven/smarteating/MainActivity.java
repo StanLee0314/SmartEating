@@ -15,7 +15,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-import com.example.steven.smarteating.activity.CommunityMapsActivity;
 import com.example.steven.smarteating.activity.MapsActivity;
 import com.example.steven.smarteating.activity.NutritionShow;
 import com.example.steven.smarteating.fragment.CommunityFragment;
@@ -78,8 +77,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new HomeFragment(), getResources().getString(R.string.Home));
         adapter.addFrag(new NutritionSearchFragment(), getResources().getString(R.string.NutritionSearch));
-        adapter.addFrag(new ReplacementFragment(), "Replacement");
-        adapter.addFrag(new UndernutritionFragment(), "Undernutrition");
+        adapter.addFrag(new ReplacementFragment(), "Replacements");
+        adapter.addFrag(new UndernutritionFragment(), "Micronutrients");
         viewPager.setOffscreenPageLimit(4);
         viewPager.setAdapter(adapter);
     }
@@ -147,8 +146,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this, MapsActivity.class);
             startActivity(intent);
         } else if (id == R.id.communityGargen) {
-            Intent intent = new Intent(this, CommunityMapsActivity.class);
-            startActivity(intent);
+            viewPager.setCurrentItem(8);
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
