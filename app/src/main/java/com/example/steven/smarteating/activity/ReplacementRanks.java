@@ -48,7 +48,7 @@ public class ReplacementRanks extends AppCompatActivity {
         ButterKnife.bind(this);
         String mfoodname = getIntent().getStringExtra(EXTRA_FOODNAME);
         String[] arr = mfoodname.split(",");
-        textView.setText(arr[0].toUpperCase());
+        textView.setText(captureName(arr[0]));
         Double menergy = getIntent().getDoubleExtra(EXTRA_CATEGORY, 0);
         init();
         int i = (int) Math.round(menergy);
@@ -190,6 +190,12 @@ public class ReplacementRanks extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
+
+    }
+
+    public static String captureName(String name) {
+        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        return name;
 
     }
 

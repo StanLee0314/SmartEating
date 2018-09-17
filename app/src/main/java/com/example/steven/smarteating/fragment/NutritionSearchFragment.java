@@ -2,6 +2,7 @@ package com.example.steven.smarteating.fragment;
 
 
 import android.app.Activity;
+import android.app.backup.RestoreObserver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,9 +25,12 @@ import com.example.steven.smarteating.model.NutritionContains;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -70,8 +74,11 @@ public class NutritionSearchFragment extends Fragment {
     ImageView pork_cli;
     @BindView(R.id.tomato_click)
     ImageView tomato_cli;
+    @BindView(R.id.empty_view)
+    TextView emptyView;
 
     private FirebaseRecyclerAdapter adapter;
+//    private RestoreObserver mObserver;
 
     private DatabaseReference db;
 
@@ -90,7 +97,6 @@ public class NutritionSearchFragment extends Fragment {
         mSearchField = view.findViewById(R.id.et_title);
         btnSearch = view.findViewById(R.id.btn_search);
         init();
-        initialFoods();
         getBookReciptList("Search here");
         //image click function
         broccoli_cli.setOnClickListener(new View.OnClickListener() {
@@ -198,6 +204,24 @@ public class NutritionSearchFragment extends Fragment {
         else {
             Toast.makeText(getActivity(), "Searching......", Toast.LENGTH_LONG).show();
             query = db.orderByChild("food_Name").startAt(searchText.trim().toLowerCase()).endAt(searchText.trim().toLowerCase() + "\uf8ff").limitToLast(10);
+            query.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        taskList.setVisibility(View.VISIBLE);
+                        emptyView.setVisibility(View.GONE);
+
+                    } else {
+                        taskList.setVisibility(View.GONE);
+                        emptyView.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
         }
         FirebaseRecyclerOptions<NutritionContains> response = new FirebaseRecyclerOptions.Builder<NutritionContains>()
                 .setQuery(query, NutritionContains.class)
@@ -208,8 +232,7 @@ public class NutritionSearchFragment extends Fragment {
             @Override
             public void onBindViewHolder(NutritionSearchFragment.BookReciptsHolder holder, int position, final NutritionContains model) {
                 // Bind the Chat object to the Holder
-
-                holder.text_Name.setText(model.getFood_Name());
+                holder.text_Name.setText(captureName(model.getFood_Name()));
 //  click function for the list
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -259,8 +282,25 @@ public class NutritionSearchFragment extends Fragment {
 
 
         };
+//        RecyclerView.AdapterDataObserver mObserver = new RecyclerView.AdapterDataObserver() {
+//            @Override
+//            public void onItemRangeInserted(int positionStart, int itemCount) {
+//
+//            }
+//
+//            @Override
+//            public void onItemRangeRemoved(int positionStart, int itemCount) {
+//                if(adapter.getItemCount() == 0){
+//                    taskList.setVisibility(View.GONE);
+//                    emptyView.setVisibility(View.VISIBLE);
+//                }
+//            }
+//        };
+//        adapter.registerAdapterDataObserver(mObserver);
         adapter.notifyDataSetChanged();
         taskList.setAdapter(adapter);
+
+
     }
 
 
@@ -298,19 +338,6 @@ public class NutritionSearchFragment extends Fragment {
                 .getCurrentFocus().getWindowToken(), 0);
     }
 
-    // initial the local data
-    public void initialFoods() {
-        NutritionContains broccoli = new NutritionContains("A0001", "Broccoli", 2, 101, 0.4, 4.7, 3.7, 0.3, 0.4, 0.08, 0.22, 0.5, 0.09, 0, 106, 0.18, 48, 48, 32, 0.5, 0.84, 21, 75, 336, 0.5, 22, 0.6, 0, 0);
-        NutritionContains tomato = new NutritionContains("A0002", "Tomato", 2, 64, 2.4, 1, 1.2, 0.1, 2.3, 0.02, 0.01, 0.7, 0.03, 0, 18, 0.26, 26, 16, 9, 0.3, 0.27, 7, 26, 214, 0.4, 8, 0.31, 0, 0.1);
-        NutritionContains beef = new NutritionContains("A0003", "Beef", 5, 534, 0, 21.9, 0, 4.4, 0, 0.06, 0.2, 2.97, 0.12, 1, 1, 0.51, 3, 0, 4, 1.2, 1.88, 24, 197, 335, 11.8, 55, 4.49, 45, 0);
-        NutritionContains lamb = new NutritionContains("A0004", "Lamb", 5, 2315, 0, 10.8, 0, 57.6, 0, 0, 0.07, 2, 0.1, 2.9, 0, 1.1, 34, 0, 5, 0.5, 0.41, 6, 56, 91, 5, 22, 0.54, 62, 0);
-        NutritionContains zucchini = new NutritionContains("A0005", "Zucchini", 2, 56, 1.7, 0.9, 1.1, 0.3, 1.7, 0.03, 0.06, 0.6, 0.03, 0, 24, 0.52, 46, 17, 18, 0.5, 0.5, 16, 34, 188, 0.5, 1, 0.33, 0, 0);
-        NutritionContains banana = new NutritionContains("A0006", "Banana", 3, 445, 25, 1.5, 3.7, 0.1, 18.2, 0.04, 0.07, 0.4, 0.2, 0, 19, 0.1, 8, 33, 10, 0.5, 0.4, 38, 21, 320, 0.5, 2, 0.2, 0, 6.8);
-        NutritionContains pork = new NutritionContains("A0007", "Pork", 5, 433, 0, 23.1, 0, 1.1, 0, 1.5, 0, 9.7, 0.73, 0.3, 0, 0.31, 0, 32, 4, 0.8, 0.86, 26, 240, 390, 17.5, 42, 1.75, 47, 0);
-        NutritionContains avocado = new NutritionContains("A0008", "Avocado", 2, 843, 0.4, 1.8, 3, 21.6, 0.4, 0.07, 0.13, 1.8, 0.12, 0, 10, 2.2, 27, 67, 13, 0.5, 0.59, 25, 49, 472, 0.5, 4, 0.52, 0, 0);
-
-
-    }
 
     // get the information of image food
     public void getResult(NutritionContains model) {
@@ -343,6 +370,12 @@ public class NutritionSearchFragment extends Fragment {
         intent.putExtra(NutritionShow.EXTRA_CHOLESTEROL, model.getCholesterol());
         intent.putExtra(NutritionShow.EXTRA_STARCH, model.getStarch());
         startActivity(intent);
+    }
+
+    public static String captureName(String name) {
+        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        return name;
+
     }
 }
 

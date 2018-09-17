@@ -140,6 +140,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     protected void onDestroy() {
+        Toast.makeText(getApplicationContext(), "Please enter a food name",
+                Toast.LENGTH_LONG).show();
         mapView.onDestroy();
         super.onDestroy();
     }

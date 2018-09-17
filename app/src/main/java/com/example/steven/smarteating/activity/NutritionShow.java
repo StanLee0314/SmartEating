@@ -1,7 +1,10 @@
 package com.example.steven.smarteating.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -70,6 +73,8 @@ public class NutritionShow extends AppCompatActivity {
     TextView cholesterol;
     @BindView(R.id.input_starch)
     TextView starch;
+    @BindView(R.id.jump_to_map)
+    ImageView imageView;
 
 
     public static String EXTRA_FOODNAME = "extra_foodname";
@@ -137,7 +142,7 @@ public class NutritionShow extends AppCompatActivity {
         double mstarch = getIntent().getDoubleExtra(EXTRA_STARCH, 0.0);
         String[] arr = mfoodname.split(",");
         String[] foodNameShow = arr[0].split(" ");
-        foodName.setText(foodNameShow[0].toUpperCase());
+        foodName.setText(captureName(foodNameShow[0]));
         energy.setText(menergy.toString());
         carbohydrates.setText(String.valueOf(mcarbohyrates));
         protein.setText(String.valueOf(mprotein));
@@ -164,7 +169,20 @@ public class NutritionShow extends AppCompatActivity {
         zinc.setText(String.valueOf(mzinc));
         cholesterol.setText(String.valueOf(mcholesterol));
         starch.setText(String.valueOf(mstarch));
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
+
+    }
+
+    public static String captureName(String name) {
+        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        return name;
 
     }
 }

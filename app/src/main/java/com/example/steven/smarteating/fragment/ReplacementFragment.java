@@ -34,9 +34,12 @@ import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.FileInputStream;
 
@@ -57,6 +60,8 @@ public class ReplacementFragment extends Fragment {
 
     @BindView(R.id.foodreplacement_rv_list)
     RecyclerView taskList;
+    @BindView(R.id.empty_view)
+    TextView emptyView;
 
     private FirebaseRecyclerAdapter adapter;
 
@@ -129,6 +134,24 @@ public class ReplacementFragment extends Fragment {
         else {
             Toast.makeText(getActivity(), "Searching......", Toast.LENGTH_LONG).show();
             query = db.orderByChild("food_Name").startAt(searchText.trim().toLowerCase()).endAt(searchText.trim().toLowerCase() + "\uf8ff").limitToLast(10);
+            query.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        taskList.setVisibility(View.VISIBLE);
+                        emptyView.setVisibility(View.GONE);
+
+                    } else {
+                        taskList.setVisibility(View.GONE);
+                        emptyView.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
         }
         FirebaseRecyclerOptions<NutritionContains> response = new FirebaseRecyclerOptions.Builder<NutritionContains>()
                 .setQuery(query, NutritionContains.class)
@@ -140,7 +163,7 @@ public class ReplacementFragment extends Fragment {
             public void onBindViewHolder(ReplacementFragment.BookReciptsHolder holder, int position, final NutritionContains model) {
                 // Bind the Chat object to the Holder
 
-                holder.text_Name.setText(model.getFood_Name());
+                holder.text_Name.setText(captureName(model.getFood_Name()));
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -212,5 +235,11 @@ public class ReplacementFragment extends Fragment {
                 .getSystemService(Context.INPUT_METHOD_SERVICE);
         imm.hideSoftInputFromWindow(((Activity) mContext).getWindow()
                 .getCurrentFocus().getWindowToken(), 0);
+    }
+
+    public static String captureName(String name) {
+        name = name.substring(0, 1).toUpperCase() + name.substring(1);
+        return name;
+
     }
 }
