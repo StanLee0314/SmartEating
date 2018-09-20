@@ -4,12 +4,12 @@ package com.example.steven.smarteating.model;
  * Created by steven on 9/11/2018.
  */
 
-public class Location {
+public class SpotLocation {
     private String name;
     private Double longitude;
     private Double latitude;
 
-    public Location() {
+    public SpotLocation() {
     }
 
     public String getName() {
@@ -37,7 +37,7 @@ public class Location {
         this.latitude = latitude;
     }
 
-    public Location(String name, Double longitude, Double latitude) {
+    public SpotLocation(String name, Double longitude, Double latitude) {
 
         this.name = name;
         this.longitude = longitude;

@@ -2,21 +2,24 @@ package com.example.steven.smarteating.activity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.steven.smarteating.R;
-import com.example.steven.smarteating.model.Location;
+import com.example.steven.smarteating.model.SpotLocation;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.database.DataSnapshot;
@@ -28,6 +31,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private MapView mapView;
+    private ImageButton getLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_maps);
         setTitle("Maps for Fresh Market");
         mapView = findViewById(R.id.map_view);
+        getLocation = findViewById(R.id.getLocation);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -88,21 +93,43 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         }
                         //test
                         mMap.setMyLocationEnabled(true);
-                        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(false);
 
                         //move
         LatLng home = new LatLng(-37.901, 145.023);
 
-                        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 12));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 12));
+
+        getLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Location location = mMap.getMyLocation();
+
+                if (location != null) {
+
+                    LatLng target = new LatLng(location.getLatitude(), location.getLongitude());
+                    CameraPosition position = mMap.getCameraPosition();
+
+                    CameraPosition.Builder builder = new CameraPosition.Builder();
+                    builder.zoom(15);
+                    builder.target(target);
+
+                    mMap.animateCamera(CameraUpdateFactory.newCameraPosition(builder.build()));
+                }
+            }
+        });
+
+
+
 // Attach a listener to read the data at our posts reference
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    Location location = postSnapshot.getValue(Location.class);
-                    if ((location.getLongitude()) > 110 && (location.getLongitude() < 150)) {
-                        LatLng latlng = new LatLng(location.getLatitude(), location.getLongitude());
-                        mMap.addMarker(new MarkerOptions().position(latlng).title(location.getName()));
+                    SpotLocation spotLocation = postSnapshot.getValue(SpotLocation.class);
+                    if ((spotLocation.getLongitude()) > 110 && (spotLocation.getLongitude() < 150)) {
+                        LatLng latlng = new LatLng(spotLocation.getLatitude(), spotLocation.getLongitude());
+                        mMap.addMarker(new MarkerOptions().position(latlng).title(spotLocation.getName()));
                     }
                 }
             }
