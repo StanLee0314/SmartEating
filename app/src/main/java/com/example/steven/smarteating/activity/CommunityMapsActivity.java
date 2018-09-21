@@ -81,6 +81,7 @@ public class CommunityMapsActivity extends FragmentActivity implements OnMapRead
         //test
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
         //move
         LatLng home = new LatLng(-37.901, 145.023);

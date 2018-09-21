@@ -31,7 +31,6 @@ import com.google.firebase.database.ValueEventListener;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private MapView mapView;
-    private ImageButton getLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +38,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(R.layout.activity_maps);
         setTitle("Maps for Fresh Market");
         mapView = findViewById(R.id.map_view);
-        getLocation = findViewById(R.id.getLocation);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -92,34 +90,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             }
                         }
                         //test
-                        mMap.setMyLocationEnabled(true);
-        mMap.getUiSettings().setMyLocationButtonEnabled(false);
+        mMap.setMyLocationEnabled(true);
+        mMap.getUiSettings().setMyLocationButtonEnabled(true);
+        mMap.getUiSettings().setZoomControlsEnabled(true);
 
                         //move
         LatLng home = new LatLng(-37.901, 145.023);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(home, 12));
-
-        getLocation.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Location location = mMap.getMyLocation();
-
-                if (location != null) {
-
-                    LatLng target = new LatLng(location.getLatitude(), location.getLongitude());
-                    CameraPosition position = mMap.getCameraPosition();
-
-                    CameraPosition.Builder builder = new CameraPosition.Builder();
-                    builder.zoom(15);
-                    builder.target(target);
-
-                    mMap.animateCamera(CameraUpdateFactory.newCameraPosition(builder.build()));
-                }
-            }
-        });
-
-
 
 // Attach a listener to read the data at our posts reference
         ref.addValueEventListener(new ValueEventListener() {

@@ -88,19 +88,16 @@
 
             </LinearLayout>
 
-            <!--<LinearLayout-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:paddingLeft="15dp"-->
-            <!--android:paddingRight="10dp">-->
+            <ImageButton
+                android:id="@+id/load_more"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:background="@drawable/jump_to_map"
+                android:clickable="true"
+                android:padding="1dp"
+                android:scaleType="fitXY" />
 
-            <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="1dp"-->
-            <!--android:background="#A9A9A9"-->
-            <!--android:paddingLeft="5dp" />-->
-
-            <!--</LinearLayout>-->
 
         </LinearLayout>
 
