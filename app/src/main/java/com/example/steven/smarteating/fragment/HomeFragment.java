@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.steven.smarteating.R;
+import com.example.steven.smarteating.activity.EatenSuggestion;
 import com.example.steven.smarteating.activity.FiveGroupsShow;
 import com.example.steven.smarteating.activity.NutritionFactsShow;
 import com.google.firebase.analytics.FirebaseAnalytics;
@@ -26,6 +27,8 @@ import butterknife.ButterKnife;
 public class HomeFragment extends Fragment {
     @BindView(R.id.the_five_group)
     ImageButton five_groups_view;
+    @BindView(R.id.eating_suggestion)
+    ImageButton eating_suggestion;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -44,6 +47,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), FiveGroupsShow.class);
+
+                startActivity(intent);
+            }
+        });
+
+        eating_suggestion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), EatenSuggestion.class);
 
                 startActivity(intent);
             }

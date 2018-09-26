@@ -145,7 +145,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.calcium_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_calcium);
                 intent.putExtra(TABLE_RES_ID, R.drawable.calcium_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Vitamin Calcium");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Calcium");
                 startActivity(intent);
             }
         });

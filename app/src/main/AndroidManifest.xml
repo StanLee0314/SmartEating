@@ -72,6 +72,10 @@
             android:name=".activity.GroupMeatShow"
             android:label="Lean Meats" />
         <activity
+            android:name=".activity.EatenSuggestion"
+            android:label="EatingSuggestion"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".activity.GroupMilkShow"
             android:label="Milk" />
         <activity

@@ -1,0 +1,115 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/tab_padding"
+    tools:context="com.example.steven.smarteating.activity.NutritionShow">
+
+    <ScrollView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="For Adults"
+                    android:paddingLeft="10dp"
+                    android:textColor="#4A4A4A"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="3dp"
+                    android:layout_gravity="start"
+                    android:text="Recommended average daily number of serves from each of the five food groups for adults:"
+                    android:textColor="#4A4A4A"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/for_adult"
+                    android:layout_width="match_parent"
+                    android:layout_height="290dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/for_adult"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="15dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:text="For Children"
+                    android:paddingLeft="10dp"
+                    android:textColor="#4A4A4A"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="3dp"
+                    android:text="Recommended average daily number of serves from each of the five food groups for children:"
+                    android:textColor="#4A4A4A"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:paddingBottom="40dp">
+
+                <ImageView
+                    android:id="@+id/for_children"
+                    android:layout_width="match_parent"
+                    android:layout_height="376dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/for_children"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

@@ -38,6 +38,7 @@ public class NutritionContains {
         this.category = category;
     }
 
+
     public NutritionContains(String food_ID, String food_Name, double category, double energy, double carbohydrates, double protein, double dietary_fibre, double total_fat, double total_sugars, double vitamin_B1, double vitamin_B2, double vitamin_B3, double vitamin_B6, double vitamin_B12, double vitamin_C, double vitamin_E, double vitamin_A, double total_Folates, double calcium, double iodine, double iron, double magnesium, double phosphorus, double potassium, double selenium, double sodium, double zinc, double cholesterol, double starch) {
         this.food_ID = food_ID;
         this.food_Name = food_Name;
@@ -50,6 +51,7 @@ public class NutritionContains {
         this.total_fat = total_fat;
         this.total_sugars = total_sugars;
         this.vitamin_B1 = vitamin_B1;
+
         this.vitamin_B2 = vitamin_B2;
         this.vitamin_B3 = vitamin_B3;
         this.vitamin_B6 = vitamin_B6;
