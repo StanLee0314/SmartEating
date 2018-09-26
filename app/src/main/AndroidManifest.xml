@@ -59,6 +59,24 @@
         <activity
             android:name=".activity.CommunityMapsActivity"
             android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".activity.FiveGroupsShow"
+            android:label="Five Food Group" />
+        <activity
+            android:name=".activity.GroupFruitShow"
+            android:label="Fruits" />
+        <activity
+            android:name=".activity.GroupGrainShow"
+            android:label="Grains" />
+        <activity
+            android:name=".activity.GroupMeatShow"
+            android:label="Lean Meats" />
+        <activity
+            android:name=".activity.GroupMilkShow"
+            android:label="Milk" />
+        <activity
+            android:name=".activity.GroupVegetableShow"
+            android:label="Vegetables" />
     </application>
 
 </manifest>

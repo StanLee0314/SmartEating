@@ -1,0 +1,271 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/tab_padding"
+    tools:context="com.example.steven.smarteating.activity.NutritionShow">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/fruit_article"
+                    android:layout_width="340dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/fruits"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:paddingBottom="20dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="341dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="12dp">
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="320dp"
+                    android:layout_height="78dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingTop="10dp"
+                    android:text="A wide variety of fruit is grown and available in Australia. There is plenty of choice throughout the year. Choosing fruits in season provides better value and better quality. Choose fruits from these different"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="33dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="fruit categories:"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="309dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+
+                    android:text="•	Pome fruits such as apples and pears"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="315dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+
+                    android:text="•	Citrus fruit such as oranges, mandarins"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="and grapefruit"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="321dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+
+                    android:text="•	Stone fruit such as apricots, cherries,"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="peaches, nectarines and plums"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="319dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+
+                    android:text="•	Tropical fruit such as bananas, paw,"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="mangoes, pineapple and melons"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+
+                    android:text="•	Berries"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+
+                    android:text="•	Other fruits such as grapes and passionfruit."
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/fruit_1"
+                    android:layout_width="340dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/fruits_1"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:paddingBottom="20dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingLeft="12dp">
+
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="342dp"
+                    android:layout_height="55dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingTop="10dp"
+                    android:text="There is increasing evidence that whole foods such as fruit are more effective in reducing the risk of cancer than specific vitamin and mineral"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="supplements."
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="339dp"
+                    android:layout_height="97dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingTop="10dp"
+                    android:text="Most fruits are low in energy (kilojoules) and high in fibre and water, making you feel fuller. This reduces the risk of over eating which can cause weight gain. The fibre in fruit is also thought to reduce the risk of some cancers,"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="including colorectal cancer."
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+
+                <ImageButton
+                    android:id="@+id/fruit_2"
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/fruits_2"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:paddingBottom="20dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="40dp"
+                android:paddingLeft="12dp"
+                android:orientation="vertical">
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="330dp"
+                    android:layout_height="171dp"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingTop="10dp"
+                    android:text="Fruit is abundant in vitamins, minerals and phytochemicals. Vitamins such as vitamin C and E and different phytochemicals may reduce the risk of cardiovascular conditions. Potassium and magnesium found in fruit have also been linked to lower blood pressure. Different coloured fruits, especially orange, red and yellow fruit, contain carotenes (Vitamin A) which are also thought to assist in immune "
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="function."
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="328dp"
+                    android:layout_height="21dp"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingTop="10dp"
+                    android:text="By the age of nine, 2 serves of fruit per day are "
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="recommended."
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

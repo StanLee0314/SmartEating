@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Australian guide to healthy eating recommends the following five groups of food."
+            android:textColor="#4A4A4A"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Choose one category to explore more:"
+            android:textColor="#4A4A4A"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp"
+            android:weightSum="5">
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="14.5dp"
+                android:paddingBottom="15dp">
+
+                <ImageButton
+                    android:id="@+id/milk_click"
+                    android:layout_width="340dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/milk"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:paddingBottom="20dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="14.5dp"
+                android:paddingBottom="15dp">
+
+                <ImageButton
+                    android:id="@+id/lean_meats_click"
+                    android:layout_width="340dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/lean_meats"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="14.5dp"
+                android:paddingBottom="15dp">
+
+                <ImageButton
+                    android:id="@+id/fruits_click"
+                    android:layout_width="340dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/fruits"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="14.5dp"
+                android:paddingBottom="15dp">
+
+                <ImageButton
+                    android:id="@+id/vegetables_click"
+                    android:layout_width="340dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/vegetables"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="370dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:paddingLeft="14.5dp"
+                android:paddingBottom="10dp">
+
+                <ImageButton
+                    android:id="@+id/grains_click"
+                    android:layout_width="340dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:paddingBottom="20dp"
+                    android:background="@drawable/grains"
+                    android:clickable="true"
+                    android:padding="1dp"
+                    android:scaleType="fitXY" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

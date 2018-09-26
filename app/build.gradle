@@ -43,6 +43,9 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     androidTestCompile 'com.android.support.test.espresso:espresso-contrib:3.0.1'
+
+    implementation 'me.biubiubiu.justifytext:library:1.1'
+
 }
 
 

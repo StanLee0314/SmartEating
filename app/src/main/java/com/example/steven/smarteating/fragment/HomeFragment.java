@@ -6,11 +6,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.steven.smarteating.R;
+import com.example.steven.smarteating.activity.FiveGroupsShow;
 import com.example.steven.smarteating.activity.NutritionFactsShow;
 import com.google.firebase.analytics.FirebaseAnalytics;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -18,6 +24,8 @@ import com.google.firebase.analytics.FirebaseAnalytics;
  * This fragement is for showing homepage
  */
 public class HomeFragment extends Fragment {
+    @BindView(R.id.the_five_group)
+    ImageButton five_groups_view;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -31,7 +39,15 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
-//        view.setBackground(getResources().getDrawable(R.drawable.background3));
+        ButterKnife.bind(this, view);
+        five_groups_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), FiveGroupsShow.class);
+
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
