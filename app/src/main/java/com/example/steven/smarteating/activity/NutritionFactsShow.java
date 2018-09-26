@@ -41,7 +41,6 @@ public class NutritionFactsShow extends AppCompatActivity {
     @BindView(R.id.undernutrition_rank_list)
     RecyclerView taskList;
     private FirebaseRecyclerAdapter adapter;
-
     private DatabaseReference db;
 
     @Override
