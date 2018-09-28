@@ -282,21 +282,6 @@ public class NutritionSearchFragment extends Fragment {
 
 
         };
-//        RecyclerView.AdapterDataObserver mObserver = new RecyclerView.AdapterDataObserver() {
-//            @Override
-//            public void onItemRangeInserted(int positionStart, int itemCount) {
-//
-//            }
-//
-//            @Override
-//            public void onItemRangeRemoved(int positionStart, int itemCount) {
-//                if(adapter.getItemCount() == 0){
-//                    taskList.setVisibility(View.GONE);
-//                    emptyView.setVisibility(View.VISIBLE);
-//                }
-//            }
-//        };
-//        adapter.registerAdapterDataObserver(mObserver);
         adapter.notifyDataSetChanged();
         taskList.setAdapter(adapter);
 

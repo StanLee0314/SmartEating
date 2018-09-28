@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import com.example.steven.smarteating.activity.CommunityMapsActivity;
 import com.example.steven.smarteating.activity.MapsActivity;
 import com.example.steven.smarteating.activity.NutritionShow;
+import com.example.steven.smarteating.activity.PlantingSuggestion;
 import com.example.steven.smarteating.fragment.CommunityFragment;
 import com.example.steven.smarteating.fragment.HomeFragment;
 import com.example.steven.smarteating.fragment.NutritionSearchFragment;
@@ -140,7 +141,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.overcomeUndernutrition) {
             viewPager.setCurrentItem(3);
         } else if (id == R.id.planting) {
-            viewPager.setCurrentItem(5);
+            Intent intent = new Intent(this, PlantingSuggestion.class);
+            startActivity(intent);
         } else if (id == R.id.nutritionQuiz) {
             viewPager.setCurrentItem(6);
         } else if (id == R.id.nearbyMarket) {
