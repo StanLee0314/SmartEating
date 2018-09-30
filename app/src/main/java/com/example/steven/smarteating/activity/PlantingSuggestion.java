@@ -49,8 +49,7 @@ public class PlantingSuggestion extends AppCompatActivity {
         String searchText = editText.getText().toString();
         Query query = null;
 
-//            query = db.startAt(searchText.trim().toLowerCase()).endAt(searchText.trim().toLowerCase() + "\uf8ff").limitToLast(10);
-        query = db.startAt(searchText).limitToLast(10);
+        query = db.limitToLast(10);
         FirebaseRecyclerOptions<GrowingFood> response = new FirebaseRecyclerOptions.Builder<GrowingFood>()
                 .setQuery(query, GrowingFood.class)
                 .setLifecycleOwner(this)   //add auto listen
@@ -69,9 +68,20 @@ public class PlantingSuggestion extends AppCompatActivity {
                     public void onClick(View v) {
 
                         Intent intent = new Intent(getApplication(), PlantsItemShow.class);
-                        intent.putExtra(NutritionShow.EXTRA_FOODNAME, model.getName());
-                        intent.putExtra(NutritionShow.EXTRA_ENERGY, model.getImage_url());
-                        intent.putExtra(NutritionShow.EXTRA_CARBOHYDRATES, model.getImage_url());
+                        intent.putExtra(PlantsItemShow.EXTRA_DESCRIPTION, model.getDescription());
+                        intent.putExtra(PlantsItemShow.EXTRA_GROWING_FROM_SEED, model.getGrowing_from_seed());
+                        intent.putExtra(PlantsItemShow.EXTRA_HARVESTING, model.getHarvesting());
+                        intent.putExtra(PlantsItemShow.EXTRA_ID, model.getId());
+                        intent.putExtra(PlantsItemShow.EXTRA_IMAGE_URL, model.getImage_url());
+                        intent.putExtra(PlantsItemShow.EXTRA_NAME, model.getName());
+                        intent.putExtra(PlantsItemShow.EXTRA_OPTIMAL_SOIL, model.getOptimal_soil());
+                        intent.putExtra(PlantsItemShow.EXTRA_OPTIMAL_SUN, model.getOptimal_sun());
+                        intent.putExtra(PlantsItemShow.EXTRA_PLANTING_CONSIDERATION, model.getplanting_considerations());
+                        intent.putExtra(PlantsItemShow.EXTRA_SPACING, model.getSpacing());
+                        intent.putExtra(PlantsItemShow.EXTRA_STORAGE_USE, model.getstorage_use());
+                        intent.putExtra(PlantsItemShow.EXTRA_TRANSPLANTING, model.getTransplanting());
+                        intent.putExtra(PlantsItemShow.EXTRA_WATERING, model.getWatering());
+                        intent.putExtra(PlantsItemShow.EXTRA_WHEN_TO_PLANT, model.getWhen_to_plant());
                         startActivity(intent);
                     }
                 });
