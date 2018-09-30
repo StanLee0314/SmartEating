@@ -17,16 +17,32 @@
             android:orientation="vertical"
             android:paddingTop="8dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
                 android:layout_height="wrap_content"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="3dp"
-                android:paddingTop="5dp"
-                android:text="Australian guide to healthy eating recommends we enjoy a wide variety of nutritious foods from following FIVE GROUPS every day."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <me.biubiubiu.justifytext.library.JustifyTextView
+                    android:layout_width="311dp"
+                    android:layout_height="57.5dp"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/roboto_light"
+                    android:paddingTop="5dp"
+                    android:text="Australian guide to healthy eating recommends we enjoy a wide variety of nutritious foods from following FIVE "
+                    android:textAlignment="textStart"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="GROUPS every day."
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="350dp"

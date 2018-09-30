@@ -87,6 +87,9 @@
         <activity
             android:name=".activity.PlantsItemShow"
             android:label="Grow your own" />
+        <activity
+            android:name=".activity.EatenKnowledge"
+            android:label="Need to know" />
     </application>
 
 </manifest>

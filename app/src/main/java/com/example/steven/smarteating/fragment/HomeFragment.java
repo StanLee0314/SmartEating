@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.steven.smarteating.R;
+import com.example.steven.smarteating.activity.EatenKnowledge;
 import com.example.steven.smarteating.activity.EatenSuggestion;
 import com.example.steven.smarteating.activity.FiveGroupsShow;
 import com.example.steven.smarteating.activity.NutritionFactsShow;
@@ -29,6 +30,8 @@ public class HomeFragment extends Fragment {
     ImageButton five_groups_view;
     @BindView(R.id.eating_suggestion)
     ImageButton eating_suggestion;
+    @BindView(R.id.what_need_know)
+    ImageButton what_need_know;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -56,6 +59,15 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), EatenSuggestion.class);
+
+                startActivity(intent);
+            }
+        });
+
+        what_need_know.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), EatenKnowledge.class);
 
                 startActivity(intent);
             }

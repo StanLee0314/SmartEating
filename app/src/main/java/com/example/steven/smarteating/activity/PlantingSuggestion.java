@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.steven.smarteating.R;
@@ -46,10 +49,39 @@ public class PlantingSuggestion extends AppCompatActivity {
         ButterKnife.bind(this);
 
         init();
-        String searchText = editText.getText().toString();
-        Query query = null;
+        getList("Search here");
+        editText.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-        query = db.limitToLast(10);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                String searchText = editText.getText().toString();
+                getList(searchText);
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
+    }
+
+    public void getList(String searchText) {
+        Query query = null;
+        if (searchText.equals("Search here")) {
+            query = db.limitToFirst(10);
+        } else if (searchText.trim().isEmpty()) {
+            query = db.limitToFirst(10);
+            Toast.makeText(getApplicationContext(), "Please enter a food name",
+                    Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "Searching......", Toast.LENGTH_LONG).show();
+            query = db.orderByChild("name").startAt(captureName(searchText.trim())).endAt(captureName(searchText.trim()) + "\uf8ff").limitToLast(10);
+        }
         FirebaseRecyclerOptions<GrowingFood> response = new FirebaseRecyclerOptions.Builder<GrowingFood>()
                 .setQuery(query, GrowingFood.class)
                 .setLifecycleOwner(this)   //add auto listen
@@ -103,6 +135,7 @@ public class PlantingSuggestion extends AppCompatActivity {
         adapter.notifyDataSetChanged();
         taskList.setAdapter(adapter);
     }
+
 
     // initial the database
     private void init() {
