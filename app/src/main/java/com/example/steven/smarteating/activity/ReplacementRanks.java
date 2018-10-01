@@ -31,8 +31,8 @@ import butterknife.ButterKnife;
  */
 
 public class ReplacementRanks extends AppCompatActivity {
-    public static String EXTRA_FOODNAME = "extra_foodName";
-    public static String EXTRA_CATEGORY = "extra_category";
+    public final static String EXTRA_FOODNAME = "extra_foodName";
+    public final static String EXTRA_CATEGORY = "extra_category";
     @BindView(R.id.input_replacement_food_name)
     TextView textView;
     @BindView(R.id.input_food_category)

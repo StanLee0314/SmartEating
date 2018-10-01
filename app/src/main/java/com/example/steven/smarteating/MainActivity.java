@@ -17,12 +17,10 @@ import android.view.MenuItem;
 
 import com.example.steven.smarteating.activity.CommunityMapsActivity;
 import com.example.steven.smarteating.activity.MapsActivity;
-import com.example.steven.smarteating.activity.NutritionShow;
 import com.example.steven.smarteating.activity.PlantingSuggestion;
-import com.example.steven.smarteating.fragment.CommunityFragment;
+import com.example.steven.smarteating.activity.QuizActivity;
 import com.example.steven.smarteating.fragment.HomeFragment;
 import com.example.steven.smarteating.fragment.NutritionSearchFragment;
-import com.example.steven.smarteating.fragment.PlantingFragment;
 import com.example.steven.smarteating.fragment.ReplacementFragment;
 import com.example.steven.smarteating.fragment.UndernutritionFragment;
 import com.google.firebase.auth.FirebaseAuth;
@@ -144,7 +142,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this, PlantingSuggestion.class);
             startActivity(intent);
         } else if (id == R.id.nutritionQuiz) {
-            viewPager.setCurrentItem(6);
+            Intent intent = new Intent(this, QuizActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nearbyMarket) {
             Intent intent = new Intent(this, MapsActivity.class);
             startActivity(intent);

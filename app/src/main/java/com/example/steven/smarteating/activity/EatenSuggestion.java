@@ -13,7 +13,7 @@ public class EatenSuggestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.eatensuggestion);
+        setContentView(R.layout.home_eat_table);
         return;
     }
 }

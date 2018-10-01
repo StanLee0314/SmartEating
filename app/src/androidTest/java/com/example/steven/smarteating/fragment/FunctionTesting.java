@@ -47,7 +47,6 @@ public class FunctionTesting {
     // underNutrtion shows
     @Test
     public void underNutritionCheck() {
-        Activity mActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 3000);
         onView(withId(R.id.drawer_layout))
                 .check(matches(isClosed(Gravity.LEFT))) // Left Drawer should be closed.
                 .perform(open()); // Open Drawer
@@ -73,7 +72,6 @@ public class FunctionTesting {
                 .perform(NavigationViewActions.navigateTo(R.id.nutritionFacts));
         mActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 5000);
         Espresso.onView(allOf(isDisplayed(), withId(R.id.foodsearch_rv_list))).perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
-        mActivity = getInstrumentation().waitForMonitorWithTimeout(monitor, 3000);
         onView(withId(R.id.input_foodName))
                 .check(matches(isDisplayed()));
     }

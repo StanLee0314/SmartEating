@@ -53,7 +53,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.vitamin_a_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_va);
                 intent.putExtra(TABLE_RES_ID, R.drawable.vitamin_a_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Vitamin A");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Vitamin A");
                 startActivity(intent);
             }
         });
@@ -65,7 +65,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.vitamin_b1_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_vb1);
                 intent.putExtra(TABLE_RES_ID, R.drawable.vitamin_b1_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Vitamin B1");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Vitamin B1");
                 startActivity(intent);
             }
         });
@@ -78,7 +78,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.vitamin_b6_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_vb6);
                 intent.putExtra(TABLE_RES_ID, R.drawable.vitamin_b6_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Vitamin B6");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Vitamin B6");
                 startActivity(intent);
             }
         });
@@ -91,7 +91,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.vitamin_b12_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_vb12);
                 intent.putExtra(TABLE_RES_ID, R.drawable.vitamin_b12_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Vitamin B12");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Vitamin B12");
                 startActivity(intent);
             }
         });
@@ -105,7 +105,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.vitamin_c_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_vc);
                 intent.putExtra(TABLE_RES_ID, R.drawable.vitamin_c_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Vitamin C");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Vitamin C");
                 startActivity(intent);
             }
         });
@@ -118,7 +118,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.vitamin_e_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_ve);
                 intent.putExtra(TABLE_RES_ID, R.drawable.vitamin_e_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Vitamin E");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Vitamin E");
                 startActivity(intent);
             }
         });
@@ -132,7 +132,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.iron_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_iron);
                 intent.putExtra(TABLE_RES_ID, R.drawable.iron_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Iron");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Iron");
                 startActivity(intent);
             }
         });
@@ -145,7 +145,7 @@ public class UndernutritionFragment extends Fragment {
                 intent.putExtra(IMAGE_RES_ID, R.drawable.calcium_click);
                 intent.putExtra(INTRODUCTION_RES_ID, R.drawable.introduction_calcium);
                 intent.putExtra(TABLE_RES_ID, R.drawable.calcium_table);
-                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Food For Calcium");
+                intent.putExtra(NAME_RES_ID, "Top 10 Suggested Foods Contain Calcium");
                 startActivity(intent);
             }
         });

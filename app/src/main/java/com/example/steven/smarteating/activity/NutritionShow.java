@@ -77,33 +77,33 @@ public class NutritionShow extends AppCompatActivity {
     ImageView imageView;
 
 
-    public static String EXTRA_FOODNAME = "extra_foodname";
-    public static String EXTRA_ENERGY = "extra_energy";
-    public static String EXTRA_CARBOHYDRATES = "extra_carbohydrates";
-    public static String EXTRA_PROTEIN = "extra_protein";
-    public static String EXTRA_DIETARYFIBRE = "extra_dietaryFibre";
-    public static String EXTRA_TOTALFAT = "extra_totalFat";
-    public static String EXTRA_TOTALSUGARS = "extra_totalSugars";
-    public static String EXTRA_B1 = "extra_b1";
-    public static String EXTRA_B2 = "extra_b2";
-    public static String EXTRA_B3 = "extra_b3";
-    public static String EXTRA_B6 = "extra_b6";
-    public static String EXTRA_B12 = "extra_b12";
-    public static String EXTRA_C = "extra_c";
-    public static String EXTRA_E = "extra_e";
-    public static String EXTRA_A = "extra_a";
-    public static String EXTRA_FOLATES = "extra_folates";
-    public static String EXTRA_CALCIUM = "extra_calcium";
-    public static String EXTRA_IODINE = "extra_iodine";
-    public static String EXTRA_IRON = "extra_iron";
-    public static String EXTRA_MAGNESIUM = "extra_magnesium";
-    public static String EXTRA_PHOSPHORUS = "extra_phosphorus";
-    public static String EXTRA_POTASSIUM = "extra_potassium";
-    public static String EXTRA_SELENIUM = "extra_selenium";
-    public static String EXTRA_SODIUM = "extra_sodium";
-    public static String EXTRA_ZINC = "extra_zinc";
-    public static String EXTRA_CHOLESTEROL = "extra_cholesterol";
-    public static String EXTRA_STARCH = "extra_starch";
+    public final static String EXTRA_FOODNAME = "extra_foodname";
+    public final static String EXTRA_ENERGY = "extra_energy";
+    public final static String EXTRA_CARBOHYDRATES = "extra_carbohydrates";
+    public final static String EXTRA_PROTEIN = "extra_protein";
+    public final static String EXTRA_DIETARYFIBRE = "extra_dietaryFibre";
+    public final static String EXTRA_TOTALFAT = "extra_totalFat";
+    public final static String EXTRA_TOTALSUGARS = "extra_totalSugars";
+    public final static String EXTRA_B1 = "extra_b1";
+    public final static String EXTRA_B2 = "extra_b2";
+    public final static String EXTRA_B3 = "extra_b3";
+    public final static String EXTRA_B6 = "extra_b6";
+    public final static String EXTRA_B12 = "extra_b12";
+    public final static String EXTRA_C = "extra_c";
+    public final static String EXTRA_E = "extra_e";
+    public final static String EXTRA_A = "extra_a";
+    public final static String EXTRA_FOLATES = "extra_folates";
+    public final static String EXTRA_CALCIUM = "extra_calcium";
+    public final static String EXTRA_IODINE = "extra_iodine";
+    public final static String EXTRA_IRON = "extra_iron";
+    public final static String EXTRA_MAGNESIUM = "extra_magnesium";
+    public final static String EXTRA_PHOSPHORUS = "extra_phosphorus";
+    public final static String EXTRA_POTASSIUM = "extra_potassium";
+    public final static String EXTRA_SELENIUM = "extra_selenium";
+    public final static String EXTRA_SODIUM = "extra_sodium";
+    public final static String EXTRA_ZINC = "extra_zinc";
+    public final static String EXTRA_CHOLESTEROL = "extra_cholesterol";
+    public final static String EXTRA_STARCH = "extra_starch";
 
 
     @Override

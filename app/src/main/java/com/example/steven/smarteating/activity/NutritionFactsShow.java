@@ -54,21 +54,21 @@ public class NutritionFactsShow extends AppCompatActivity {
 
         titleView.setText(getIntent().getStringExtra(NAME_RES_ID));
         taskList.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Vitamin A")) {
+        if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin A")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_a");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Vitamin B1")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin B1")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_b1");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Vitamin B6")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin B6")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_b6");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Vitamin B12")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin B12")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_b12");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Vitamin C")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin C")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_c");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Vitamin E")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin E")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_e");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Iron")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Iron")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("iron");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Food For Calcium")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Calcium")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("calcium");
         }
         getList();

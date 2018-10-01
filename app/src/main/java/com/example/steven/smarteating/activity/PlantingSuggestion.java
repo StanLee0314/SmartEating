@@ -23,9 +23,12 @@ import com.example.steven.smarteating.model.GrowingFood;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.firebase.ui.storage.images.FirebaseImageLoader;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -39,6 +42,8 @@ public class PlantingSuggestion extends AppCompatActivity {
     EditText editText;
     @BindView(R.id.plants_search_rv_list)
     RecyclerView taskList;
+    @BindView(R.id.empty_view)
+    TextView emptyView;
     private FirebaseRecyclerAdapter adapter;
     private DatabaseReference db;
 
@@ -81,6 +86,24 @@ public class PlantingSuggestion extends AppCompatActivity {
         } else {
             Toast.makeText(getApplicationContext(), "Searching......", Toast.LENGTH_LONG).show();
             query = db.orderByChild("name").startAt(captureName(searchText.trim())).endAt(captureName(searchText.trim()) + "\uf8ff").limitToLast(10);
+            query.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if (dataSnapshot.exists()) {
+                        taskList.setVisibility(View.VISIBLE);
+                        emptyView.setVisibility(View.GONE);
+
+                    } else {
+                        taskList.setVisibility(View.GONE);
+                        emptyView.setVisibility(View.VISIBLE);
+                    }
+                }
+
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
+
+                }
+            });
         }
         FirebaseRecyclerOptions<GrowingFood> response = new FirebaseRecyclerOptions.Builder<GrowingFood>()
                 .setQuery(query, GrowingFood.class)

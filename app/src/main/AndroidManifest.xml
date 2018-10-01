@@ -90,6 +90,9 @@
         <activity
             android:name=".activity.EatenKnowledge"
             android:label="Need to know" />
+        <activity
+            android:name=".activity.QuizActivity"
+            android:label="Need to know" />
     </application>
 
 </manifest>
