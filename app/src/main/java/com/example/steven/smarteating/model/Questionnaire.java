@@ -18,50 +18,11 @@ public class Questionnaire {
             "Drink no more than 2 standard drinks containing alcohol on any one day."
     };
 
-    public String choices[][] = {
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"},
-            {"Yes", "No"}
-    };
 
-    public String correctAnswer[] = {
-            "Yes",
-            "Yes",
-            "Yes",
-            "Yes",
-            "Yes",
-            "Yes",
-            "Yes",
-            "Yes",
-            "Yes",
-            "Yes"
-    };
 
     public String getQuestion(int a) {
         String question = questions[a];
         return question;
     }
 
-    public String getchoice1(int a) {
-        String choice = choices[a][0];
-        return choice;
-    }
-
-    public String getchoice2(int a) {
-        String choice = choices[a][1];
-        return choice;
-    }
-
-
-    public String getCorrectAnswer(int a) {
-        String answer = correctAnswer[a];
-        return answer;
-    }
 }

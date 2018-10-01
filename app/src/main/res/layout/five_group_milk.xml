@@ -100,13 +100,13 @@
                     android:layout_height="56dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Milks - All reduced fat or full cream milks, plain and flavoured, long life milks, powdered milk, evaporated milk, soy beverages (fortified"
+                    android:text="Milks - All reduced fat or full cream milks, plain and flavoured, long life milks, powdered milk, evaporated milk, soy beverages (fortified"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32dp"
                     android:fontFamily="@font/roboto_light"
                     android:text="with at least 100mg calcium/100mL)"
                     android:textColor="#4A4A4A"
@@ -117,13 +117,13 @@
                     android:layout_height="40dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Yoghurt - All yoghurts including reduced fat or full cream, plain and flavoured, soy yoghurt"
+                    android:text="Yoghurt - All yoghurts including reduced fat or full cream, plain and flavoured, soy yoghurt"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32dp"
                     android:fontFamily="@font/roboto_light"
                     android:text="(calcium fortified)."
                     android:textColor="#4A4A4A"
@@ -134,7 +134,7 @@
                     android:layout_height="40dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Cheese - All hard cheeses, reduced or full fat for example cheddar, red Leicester, Gloucester, Edam, Gouda Soy cheeses"
+                    android:text="Cheese - All hard cheeses, reduced or full fat for example cheddar, red Leicester, Gloucester, Edam, Gouda Soy cheeses"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 

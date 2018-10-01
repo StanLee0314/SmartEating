@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.steven.smarteating.R;
-import com.example.steven.smarteating.model.NutritionContains;
+import com.example.steven.smarteating.model.TopTenFood;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
@@ -80,17 +80,17 @@ public class NutritionFactsShow extends AppCompatActivity {
 
         query = db.limitToFirst(10);
 
-        FirebaseRecyclerOptions<NutritionContains> response = new FirebaseRecyclerOptions.Builder<NutritionContains>()
-                .setQuery(query, NutritionContains.class)
+        FirebaseRecyclerOptions<TopTenFood> response = new FirebaseRecyclerOptions.Builder<TopTenFood>()
+                .setQuery(query, TopTenFood.class)
                 .setLifecycleOwner(this)   //add auto listen
                 .build();
 
-        adapter = new FirebaseRecyclerAdapter<NutritionContains, NutritionFactsShow.BookReciptsHolder>(response) {
+        adapter = new FirebaseRecyclerAdapter<TopTenFood, NutritionFactsShow.BookReciptsHolder>(response) {
             @Override
-            public void onBindViewHolder(NutritionFactsShow.BookReciptsHolder holder, int position, final NutritionContains model) {
+            public void onBindViewHolder(NutritionFactsShow.BookReciptsHolder holder, int position, final TopTenFood model) {
                 // Bind the Chat object to the Holder
 
-                holder.text_Name.setText(model.getFood_ID() + "  " + model.getFood_Name());
+                holder.text_Name.setText(model.getFood_ID() + "  " + model.getShow_Name());
 
 // click function to start new activity
                 holder.itemView.setOnClickListener(new View.OnClickListener() {

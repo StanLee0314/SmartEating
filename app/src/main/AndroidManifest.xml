@@ -83,16 +83,19 @@
             android:label="Vegetables" />
         <activity
             android:name=".activity.PlantingSuggestion"
-            android:label="Grow your own" />
+            android:label="Grow Your Vegetables" />
         <activity
             android:name=".activity.PlantsItemShow"
-            android:label="Grow your own" />
+            android:label="Grow your Vegetables" />
         <activity
             android:name=".activity.EatenKnowledge"
             android:label="Need to know" />
         <activity
             android:name=".activity.QuizActivity"
-            android:label="Need to know" />
+            android:label="Healthy Eating Quiz" />
+        <activity
+            android:name=".activity.QuizResultShow"
+            android:label="Healthy Eating Quiz" />
     </application>
 
 </manifest>

@@ -53,6 +53,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         tabLayout = findViewById(R.id.tabsLayout);
         tabLayout.setupWithViewPager(viewPager);
 
+        int fragmentTranId = getIntent().getIntExtra("FRAGMENT_ID", 0);
+        viewPager.setCurrentItem(fragmentTranId);
+
+
+
+
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);

@@ -51,7 +51,7 @@
 
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="315dp"
+                    android:layout_width="310dp"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
                     android:text="Legumes are the seeds of the plant and are eaten in their immature form as green peas and beans, and the mature form as dried peas, beans, lentils and chickpeas."
@@ -109,16 +109,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/roboto_light"
+                    android:lineSpacingExtra="5sp"
                     android:text="Dark green or cruciferous/brassica"
                     android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="309dp"
                     android:layout_height="21dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Broccoli, brussels sprouts, bok choy, cabbages,"
+                    android:text="Broccoli, brussels sprouts, bok choy, cabbages,"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
@@ -134,7 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="34dp"
                     android:fontFamily="@font/roboto_light"
-                    android:text="•	Lettuce, silverbeet, spinach, snow peas"
+                    android:text="Lettuce, silverbeet, spinach, snow peas"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
@@ -144,14 +146,15 @@
                     android:fontFamily="@font/roboto_light"
                     android:text="Root/tubular/bulb vegetables"
                     android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="314dp"
                     android:layout_height="37dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Potato, cassava, sweet potato, taro, carrots, beetroot, onions, shallots, garlic, bamboo"
+                    android:text="Potato, cassava, sweet potato, taro, carrots, beetroot, onions, shallots, garlic, bamboo"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
@@ -169,14 +172,15 @@
                     android:fontFamily="@font/roboto_light"
                     android:text="Legumes/beans"
                     android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="314dp"
                     android:layout_height="38dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Red kidney beans, soybeans, lima beans, cannellini beans, chickpeas, lentils, split peas,"
+                    android:text="Red kidney beans, soybeans, lima beans, cannellini beans, chickpeas, lentils, split peas,"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
@@ -223,7 +227,8 @@
                     android:fontFamily="@font/roboto_light"
                     android:text="Other vegetables"
                     android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
 
                 <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="315dp"
@@ -231,7 +236,7 @@
                     android:layout_gravity="start"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Tomato, celery, sprouts, zucchini, squash, avocado, capsicum, eggplant, mushrooms, cucumber, okra, pumpkin, green peas, green"
+                    android:text="Tomato, celery, sprouts, zucchini, squash, avocado, capsicum, eggplant, mushrooms, cucumber, okra, pumpkin, green peas, green"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 

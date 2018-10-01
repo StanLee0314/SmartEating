@@ -42,7 +42,7 @@
                 android:layout_height="160dp"
                 android:layout_gravity="center"
                 android:adjustViewBounds="true"
-                android:background="@drawable/recommended_daily_intake"
+                android:background="@drawable/eating_suggestion"
                 android:clickable="true"
                 android:padding="1dp"
                 android:paddingTop="20dp"

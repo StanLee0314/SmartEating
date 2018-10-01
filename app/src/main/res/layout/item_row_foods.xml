@@ -26,7 +26,7 @@
 
                     <TextView
                         android:id="@+id/foodTitle"
-                        android:layout_width="290dp"
+                        android:layout_width="265dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:layout_marginStart="18dp"
@@ -44,9 +44,7 @@
                         android:layout_gravity="end"
                         android:background="@drawable/right_arrow" />
 
-
                 </TableRow>
-
 
             </TableLayout>
 
@@ -64,5 +62,8 @@
                 android:background="#A9A9A9"
                 android:paddingLeft="5dp" />
         </LinearLayout>
+
     </LinearLayout>
+    
+
 </RelativeLayout>

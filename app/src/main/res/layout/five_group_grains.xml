@@ -93,13 +93,13 @@
                     android:layout_height="39dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Breads - Wholemeal, wholegrain, white, rye, pita, lavash, naan, focaccia, crispbreads,"
+                    android:text="Breads - Wholemeal, wholegrain, white, rye, pita, lavash, naan, focaccia, crispbreads,"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32dp"
                     android:fontFamily="@font/roboto_light"
                     android:text="damper"
                     android:textColor="#4A4A4A"
@@ -110,13 +110,21 @@
                     android:layout_height="39dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Breakfast Cereals - Ready to eat, high fibre (wholegrain) oats, porridge, muesli,"
+                    android:text="Breakfast Cereals - Ready to eat, high fibre (wholegrain) oats, porridge, muesli,"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="rye, quinoa, semolina"
+                    android:textColor="#4A4A4A"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
                     android:fontFamily="@font/roboto_light"
                     android:text="wholewheat biscuits"
                     android:textColor="#4A4A4A"
@@ -126,16 +134,9 @@
                     android:layout_width="314dp"
                     android:layout_height="36dp"
                     android:fontFamily="@font/roboto_light"
+                    android:lineSpacingExtra="30sp"
                     android:paddingTop="10dp"
-                    android:text="•	Grains - Rice, barley, corn, polenta, buckwheat, spelt, millet, sorghum, triticale,"
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:text="rye, quinoa, semolina"
+                    android:text="Grains - Rice, barley, corn, polenta, buckwheat, spelt, millet, sorghum, triticale,"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 
@@ -144,7 +145,7 @@
                     android:layout_height="39dp"
                     android:fontFamily="@font/roboto_light"
                     android:paddingTop="10dp"
-                    android:text="•	Other products - Pasta, noodles, English muffin, crumpet, rice cakes, couscous,"
+                    android:text="Other products - Pasta, noodles, English muffin, crumpet, rice cakes, couscous,"
                     android:textColor="#4A4A4A"
                     android:textSize="16sp" />
 

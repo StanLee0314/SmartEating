@@ -17,10 +17,16 @@ import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.steven.smarteating.R;
+import com.example.steven.smarteating.activity.GroupFruitShow;
+import com.example.steven.smarteating.activity.GroupGrainShow;
+import com.example.steven.smarteating.activity.GroupMeatShow;
+import com.example.steven.smarteating.activity.GroupMilkShow;
+import com.example.steven.smarteating.activity.GroupVegetableShow;
 import com.example.steven.smarteating.activity.NutritionShow;
 import com.example.steven.smarteating.activity.ReplacementRanks;
 import com.example.steven.smarteating.model.NutritionContains;
@@ -62,6 +68,16 @@ public class ReplacementFragment extends Fragment {
     RecyclerView taskList;
     @BindView(R.id.empty_view)
     TextView emptyView;
+    @BindView(R.id.five_fruits_click)
+    ImageView fruits_cli;
+    @BindView(R.id.five_grains_click)
+    ImageView grains_cli;
+    @BindView(R.id.five_meat_click)
+    ImageView meat_cli;
+    @BindView(R.id.five_milk_click)
+    ImageView milk_cli;
+    @BindView(R.id.five_vegetables_click)
+    ImageView vegetable_cli;
 
     private FirebaseRecyclerAdapter adapter;
 
@@ -87,6 +103,42 @@ public class ReplacementFragment extends Fragment {
 
 
         getBookReciptList("Search here");
+
+        milk_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), GroupMilkShow.class);
+                startActivity(intent);
+            }
+        });
+        vegetable_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), GroupVegetableShow.class);
+                startActivity(intent);
+            }
+        });
+        fruits_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), GroupFruitShow.class);
+                startActivity(intent);
+            }
+        });
+        grains_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), GroupGrainShow.class);
+                startActivity(intent);
+            }
+        });
+        meat_cli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), GroupMeatShow.class);
+                startActivity(intent);
+            }
+        });
 
 //    search button function
         btnSearch.setOnClickListener(new View.OnClickListener() {

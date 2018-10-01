@@ -23,10 +23,10 @@
 
         <TextView
             android:id="@+id/grow_food_name"
-            android:layout_width="77dp"
+            android:layout_width="110dp"
             android:layout_height="43dp"
             android:layout_marginBottom="6dp"
-            android:layout_marginEnd="140dp"
+            android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/roboto"
@@ -36,10 +36,9 @@
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/grow_food_introduction"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/grow_food_picture"
-            app:layout_constraintVertical_bias="0.105" />
+            app:layout_constraintVertical_bias="1.0" />
 
         <TextView
             android:id="@+id/grow_food_introduction"
@@ -116,7 +115,7 @@
 
         <TextView
             android:id="@+id/optimal_soil"
-            android:layout_width="80dp"
+            android:layout_width="160dp"
             android:layout_height="26dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
@@ -147,7 +146,7 @@
         <TextView
             android:id="@+id/plant_considerations"
             android:layout_width="320dp"
-            android:layout_height="91dp"
+            android:layout_height="115dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -165,7 +164,7 @@
             android:layout_height="31dp"
             android:layout_marginEnd="212dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="15dp"
             android:fontFamily="@font/roboto"
             android:text="When to plant:"
             android:textColor="#4A4A4A"
@@ -269,7 +268,7 @@
         <TextView
             android:id="@+id/spacing"
             android:layout_width="316dp"
-            android:layout_height="67dp"
+            android:layout_height="80dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -331,7 +330,7 @@
         <TextView
             android:id="@+id/harvesting"
             android:layout_width="321dp"
-            android:layout_height="108dp"
+            android:layout_height="130dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -362,7 +361,7 @@
         <TextView
             android:id="@+id/storage_use"
             android:layout_width="321dp"
-            android:layout_height="108dp"
+            android:layout_height="120dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
