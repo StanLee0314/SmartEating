@@ -266,7 +266,7 @@
                 android:paddingBottom="18dp"
                 android:paddingLeft="11dp"
                 android:paddingTop="5dp"
-                android:text="Too much sugar in food or drink can make it high in kilojoules, or 慹nergy dense? This can make it harder to control your weight. It has"
+                android:text="Too much sugar in food or drink can make it high in kilojoules, or energy dense. This can make it harder to control your weight. It has"
                 android:textAlignment="textStart"
                 android:textColor="#4A4A4A"
                 android:textSize="16sp" />
@@ -310,7 +310,7 @@
                 android:paddingBottom="18dp"
                 android:paddingLeft="11dp"
                 android:paddingTop="5dp"
-                android:text="Not all sugars are the same. There are naturally occurring sugars and added sugars. Sometimes people think that eating too much sugar leads to diabetes, because diabetes is a condition where blood glucose (or blood 憇ugar? needs to be managed. Sugar itself does not lead to diabetes. However, being overweight increases a person抯 risk of type 2 diabetes and too much added sugars can "
+                android:text="Not all sugars are the same. There are naturally occurring sugars and added sugars. Sometimes people think that eating too much sugar leads to diabetes, because diabetes is a condition where blood glucose (or blood sugar needs to be managed. Sugar itself does not lead to diabetes. However, being overweight increases a person's risk of type 2 diabetes and too much added sugars can "
                 android:textAlignment="textStart"
                 android:textColor="#4A4A4A"
                 android:textSize="16sp" />

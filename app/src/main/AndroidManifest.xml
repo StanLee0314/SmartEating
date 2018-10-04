@@ -32,18 +32,18 @@
         <activity
             android:name=".activity.NutritionShow"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Nurtition Facts" />
+        <!--android:theme="@style/AppTheme.NoActionBar" />-->
         <activity
             android:name=".activity.ReplacementRanks"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Replacments" />
+        <!--android:theme="@style/AppTheme.NoActionBar" />-->
         <activity
             android:name=".activity.NutritionFactsShow"
             android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Micronutrients" />
+        <!--android:theme="@style/AppTheme.NoActionBar" />-->
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
@@ -55,10 +55,10 @@
             android:required="false" />
         <activity
             android:name=".activity.MapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="Fresh Markets" />
         <activity
             android:name=".activity.CommunityMapsActivity"
-            android:label="@string/title_activity_maps" />
+            android:label="Community Gardens" />
         <activity
             android:name=".activity.FiveGroupsShow"
             android:label="Five Food Group" />
@@ -73,8 +73,8 @@
             android:label="Lean Meats" />
         <activity
             android:name=".activity.EatenSuggestion"
-            android:label="EatingSuggestion"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Recommended Intakes" />
+        <!--android:theme="@style/AppTheme.NoActionBar" />-->
         <activity
             android:name=".activity.GroupMilkShow"
             android:label="Milk" />
@@ -89,13 +89,16 @@
             android:label="Grow your Vegetables" />
         <activity
             android:name=".activity.EatenKnowledge"
-            android:label="Need to know" />
+            android:label="Fat,Salt,Sugars and Alcohol" />
         <activity
             android:name=".activity.QuizActivity"
-            android:label="Healthy Eating Quiz" />
+            android:label="Nutrition Quiz" />
         <activity
             android:name=".activity.QuizResultShow"
-            android:label="Healthy Eating Quiz" />
+            android:label="Quiz Result" />
+        <activity
+            android:name=".activity.AboutSmartEating"
+            android:label="About SmartEating" />
     </application>
 
 </manifest>

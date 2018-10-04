@@ -1,14 +1,18 @@
 package com.example.steven.smarteating.activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 import com.example.steven.smarteating.model.SpotLocation;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -23,7 +27,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class CommunityMapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class CommunityMapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private MapView mapView;
 
@@ -32,6 +36,7 @@ public class CommunityMapsActivity extends FragmentActivity implements OnMapRead
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setTitle("Maps for Fresh Market");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mapView = findViewById(R.id.map_view);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
@@ -143,5 +148,13 @@ public class CommunityMapsActivity extends FragmentActivity implements OnMapRead
         mapView.onLowMemory();
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
 
+        return super.onOptionsItemSelected(item);
+
+    }
 }

@@ -56,12 +56,12 @@
         android:id="@+id/medium_low_find_recommened"
         android:layout_width="wrap_content"
         android:layout_height="73dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@+id/medium_low_learn_more"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:background="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/find_recommend" />
 
@@ -69,11 +69,12 @@
         android:id="@+id/medium_low_learn_more"
         android:layout_width="wrap_content"
         android:layout_height="73dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@+id/medium_low_add"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/learn_more" />
 
@@ -86,6 +87,7 @@
         android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@+id/medium_low_feedback"
         app:layout_constraintEnd_toEndOf="parent"
+        android:background="#ffffff"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/add_variety" />
 

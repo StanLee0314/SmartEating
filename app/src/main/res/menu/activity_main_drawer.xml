@@ -40,6 +40,10 @@
             android:id="@+id/communityGargen"
             android:icon="@drawable/community_garden"
             android:title="Nearby Community Gardens" />
+        <item
+            android:id="@+id/about_us"
+            android:icon="@drawable/about_us"
+            android:title="About SmartEating" />
     </group>
 
 </menu>

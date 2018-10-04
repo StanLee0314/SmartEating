@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 import com.example.steven.smarteating.model.TopTenFood;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -48,6 +50,7 @@ public class NutritionFactsShow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nutritionfacts_show);
         ButterKnife.bind(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         //get the value of the fragment
         imageView.setImageResource(getIntent().getIntExtra(IMAGE_RES_ID, R.drawable.vitamin_a_click));
         introductionView.setImageResource(getIntent().getIntExtra(INTRODUCTION_RES_ID, R.drawable.introduction_va));
@@ -78,7 +81,7 @@ public class NutritionFactsShow extends AppCompatActivity {
 
         Query query = null;
 
-        query = db.limitToFirst(10);
+        query = db.limitToFirst(20);
 
         FirebaseRecyclerOptions<TopTenFood> response = new FirebaseRecyclerOptions.Builder<TopTenFood>()
                 .setQuery(query, TopTenFood.class)
@@ -174,6 +177,17 @@ public class NutritionFactsShow extends AppCompatActivity {
     @Override
     public void onStop() {
         super.onStop();
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+//        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
 
     }
 }

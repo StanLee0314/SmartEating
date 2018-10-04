@@ -3,11 +3,13 @@ package com.example.steven.smarteating.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 
 import butterknife.BindView;
@@ -68,6 +70,7 @@ public class PlantsItemShow extends AppCompatActivity {
         setContentView(R.layout.plantfactshow);
 
         ButterKnife.bind(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 // get the value from the fragment
         plantsName.setText(getIntent().getStringExtra(EXTRA_NAME));
         plantsIntroduction.setText(getIntent().getStringExtra(EXTRA_DESCRIPTION));
@@ -85,5 +88,14 @@ public class PlantsItemShow extends AppCompatActivity {
         Glide.with(this).load(image_url).into(plantsImage);
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
 }
 

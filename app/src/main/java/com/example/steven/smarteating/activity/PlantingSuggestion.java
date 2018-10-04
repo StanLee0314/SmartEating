@@ -9,6 +9,7 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 import com.example.steven.smarteating.model.GrowingFood;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
@@ -52,7 +54,7 @@ public class PlantingSuggestion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plantingsearch);
         ButterKnife.bind(this);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         init();
         getList("Search here");
         editText.addTextChangedListener(new TextWatcher() {
@@ -200,6 +202,15 @@ public class PlantingSuggestion extends AppCompatActivity {
 
     }
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+
+    }
 }
 
 

@@ -3,6 +3,7 @@ package com.example.steven.smarteating.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -10,6 +11,8 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+//import com.example.steven.smarteating.BaseActivity;
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 
 /**
@@ -110,7 +113,7 @@ public class NutritionShow extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.nutritiondetail);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ButterKnife.bind(this);
 // get the value from the fragment
         String mfoodname = getIntent().getStringExtra(EXTRA_FOODNAME);
@@ -183,6 +186,16 @@ public class NutritionShow extends AppCompatActivity {
     public static String captureName(String name) {
         name = name.substring(0, 1).toUpperCase() + name.substring(1);
         return name;
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
 
     }
 }

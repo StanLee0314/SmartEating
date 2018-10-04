@@ -3,9 +3,13 @@ package com.example.steven.smarteating.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+//import com.example.steven.smarteating.BaseActivity;
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 import com.example.steven.smarteating.model.Questionnaire;
 import java.util.Random;
@@ -29,7 +33,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_main);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         btn_one = findViewById(R.id.yes_click);
         btn_one.setOnClickListener(this);
@@ -69,6 +73,16 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(getApplicationContext(), QuizResultShow.class);
         intent.putExtra(EXTRA_POINTS, points);
         startActivity(intent);
+
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
 
     }
 

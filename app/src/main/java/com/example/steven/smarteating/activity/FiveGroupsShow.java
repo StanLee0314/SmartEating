@@ -3,10 +3,12 @@ package com.example.steven.smarteating.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 
 import butterknife.BindView;
@@ -33,6 +35,7 @@ public class FiveGroupsShow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_five_group);
         ButterKnife.bind(this);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         milk_click.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,5 +77,15 @@ public class FiveGroupsShow extends AppCompatActivity {
             }
         });
         return;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
+
+        return super.onOptionsItemSelected(item);
+
     }
 }

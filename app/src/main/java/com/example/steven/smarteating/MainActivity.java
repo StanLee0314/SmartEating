@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.example.steven.smarteating.activity.AboutSmartEating;
 import com.example.steven.smarteating.activity.CommunityMapsActivity;
 import com.example.steven.smarteating.activity.MapsActivity;
 import com.example.steven.smarteating.activity.PlantingSuggestion;
@@ -135,8 +136,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-
-        if (id == R.id.home) {
+        if (id == android.R.id.home) {
+            finish();
+        } else if (id == R.id.home) {
             viewPager.setCurrentItem(0);
         } else if (id == R.id.nutritionFacts) {
             viewPager.setCurrentItem(1);
@@ -155,6 +157,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(intent);
         } else if (id == R.id.communityGargen) {
             Intent intent = new Intent(this, CommunityMapsActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.about_us) {
+            Intent intent = new Intent(this, AboutSmartEating.class);
             startActivity(intent);
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

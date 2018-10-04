@@ -3,6 +3,7 @@ package com.example.steven.smarteating.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ public class QuizResultShow extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         int points = getIntent().getIntExtra(EXTRA_POINTS, 0);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         if (points >= 8) {
             setContentView(R.layout.quiz_result_high);
             pointsResult = findViewById(R.id.high_score);
@@ -139,5 +141,12 @@ public class QuizResultShow extends AppCompatActivity {
             });
 
         }
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent myIntent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivityForResult(myIntent, 0);
+        return true;
+
     }
 }

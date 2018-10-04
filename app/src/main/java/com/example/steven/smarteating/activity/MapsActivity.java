@@ -1,6 +1,7 @@
 package com.example.steven.smarteating.activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Build;
@@ -8,11 +9,14 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.steven.smarteating.MainActivity;
 import com.example.steven.smarteating.R;
 import com.example.steven.smarteating.model.SpotLocation;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -28,7 +32,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private MapView mapView;
 
@@ -37,6 +41,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         setTitle("Maps for Fresh Market");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mapView = findViewById(R.id.map_view);
         mapView.onCreate(savedInstanceState);
         mapView.getMapAsync(this);
@@ -156,10 +161,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
 
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) // Press Back Icon
+        {
+            finish();
+        }
 
+        return super.onOptionsItemSelected(item);
 
-
-
+    }
 
 
 }
