@@ -12,8 +12,8 @@
 
         <ImageView
             android:id="@+id/grow_food_picture"
-            android:layout_width="167dp"
-            android:layout_height="138dp"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
@@ -23,48 +23,39 @@
 
         <TextView
             android:id="@+id/grow_food_name"
-            android:layout_width="110dp"
-            android:layout_height="43dp"
-            android:layout_marginBottom="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/roboto"
             android:gravity="center"
-            android:text="Basil"
             android:textColor="#4A4A4A"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/grow_food_introduction"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/grow_food_picture"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toBottomOf="@+id/grow_food_picture" />
 
         <TextView
             android:id="@+id/grow_food_introduction"
-            android:layout_width="320dp"
-            android:layout_height="181dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_light"
             android:gravity="left"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
-            app:layout_constraintBottom_toTopOf="@+id/optimal_sun"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.476"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/grow_food_name" />
 
         <View
             android:id="@+id/view"
             android:layout_width="330dp"
             android:layout_height="1dp"
-            android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="15dp"
             android:background="#4A4A4A"
-            app:layout_constraintBottom_toTopOf="@+id/optimal_sun"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.842"
             app:layout_constraintStart_toStartOf="parent"
@@ -75,36 +66,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="17dp"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/roboto"
             android:text="Optimal sun:"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintBottom_toTopOf="@+id/optimal_soil"
-            app:layout_constraintEnd_toStartOf="@+id/optimal_sun"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view" />
+            app:layout_constraintTop_toBottomOf="@+id/view"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/optimal_sun"
-            android:layout_width="222dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/roboto_light"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="17dp"
             android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto"
             android:text="Optimal soil:"
@@ -115,38 +104,36 @@
 
         <TextView
             android:id="@+id/optimal_soil"
-            android:layout_width="160dp"
-            android:layout_height="26dp"
-            android:layout_marginEnd="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="@font/roboto_light"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.013"
             app:layout_constraintStart_toEndOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/optimal_sun" />
 
         <TextView
             android:id="@+id/textView7"
-            android:layout_width="211dp"
-            android:layout_height="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto"
             android:text="Planting considerations: "
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintHorizontal_bias="0.048"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
         <TextView
             android:id="@+id/plant_considerations"
-            android:layout_width="320dp"
-            android:layout_height="115dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -154,6 +141,7 @@
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
@@ -161,53 +149,54 @@
         <TextView
             android:id="@+id/textView9"
             android:layout_width="126dp"
-            android:layout_height="31dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="212dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="64dp"
             android:fontFamily="@font/roboto"
             android:text="When to plant:"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.75"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/plant_considerations" />
 
         <TextView
             android:id="@+id/when_to_plant"
-            android:layout_width="320dp"
-            android:layout_height="135dp"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="5dp"
             android:fontFamily="@font/roboto_light"
             android:textAlignment="textStart"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
         <TextView
             android:id="@+id/textView11"
             android:layout_width="144dp"
-            android:layout_height="31dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="48dp"
             android:fontFamily="@font/roboto"
             android:text="Growing from seed:"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.065"
+            app:layout_constraintHorizontal_bias="0.04"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/when_to_plant" />
 
         <TextView
             android:id="@+id/grow_from_seed"
-            android:layout_width="318dp"
-            android:layout_height="90dp"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -215,16 +204,17 @@
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="113dp"
-            android:layout_height="25dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:text="Transplanting:"
             android:textColor="#4A4A4A"
@@ -236,8 +226,8 @@
 
         <TextView
             android:id="@+id/transplanting"
-            android:layout_width="320dp"
-            android:layout_height="88dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -245,14 +235,14 @@
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.476"
+            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
         <TextView
             android:id="@+id/textView15"
             android:layout_width="117dp"
-            android:layout_height="31dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="25dp"
@@ -267,8 +257,8 @@
 
         <TextView
             android:id="@+id/spacing"
-            android:layout_width="316dp"
-            android:layout_height="80dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -276,14 +266,14 @@
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="145dp"
-            android:layout_height="23dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="25dp"
@@ -298,8 +288,8 @@
 
         <TextView
             android:id="@+id/watering"
-            android:layout_width="316dp"
-            android:layout_height="47dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
@@ -307,7 +297,7 @@
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.32"
+            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView17" />
 
@@ -329,23 +319,22 @@
 
         <TextView
             android:id="@+id/harvesting"
-            android:layout_width="321dp"
-            android:layout_height="130dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:fontFamily="@font/roboto_light"
-            android:textAlignment="textStart"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
         <TextView
             android:id="@+id/textView21"
             android:layout_width="115dp"
-            android:layout_height="23dp"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="25dp"
@@ -360,21 +349,21 @@
 
         <TextView
             android:id="@+id/storage_use"
-            android:layout_width="321dp"
-            android:layout_height="120dp"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto_light"
-            android:textAlignment="textStart"
             android:textColor="#4A4A4A"
             android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.4"
+            app:layout_constraintHorizontal_bias="0.195"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView21" />
+            app:layout_constraintTop_toTopOf="@+id/textView21"
+            app:layout_constraintVertical_bias="1.0" />
 
 
     </android.support.constraint.ConstraintLayout>

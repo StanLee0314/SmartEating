@@ -8,18 +8,21 @@
     tools:context=".MainActivity">
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_width="344dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#FFFFFF"
+            android:paddingBottom="30dp"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
+            android:paddingTop="20dp"
             android:stretchColumns="1">
 
             <TableRow>
@@ -30,6 +33,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:fontFamily="@font/roboto"
+                    android:paddingLeft="5dp"
                     android:textColor="#000"
                     android:textSize="23sp" />
 
@@ -46,21 +50,16 @@
             </TableRow>
 
 
-            <TableRow>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="start"
-                    android:text=""
-                    android:textColor="#4A4A4A"
-                    android:textSize="25sp" />
-            </TableRow>
-
-            <View
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:background="#4A4A4A" />
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="#4A4A4A" />
+            </LinearLayout>
 
 
             <TableRow android:layout_margin="0.5dip">
@@ -73,7 +72,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/macronutrients"
                     android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
             </TableRow>
 
             <TableRow android:layout_width="wrap_content">
@@ -268,16 +267,22 @@
                     android:textSize="17sp" />
             </TableRow>
 
-            <View
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:background="#4A4A4A" />
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="#4A4A4A" />
+            </LinearLayout>
 
             <TableRow>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="10dp"
                     android:layout_gravity="start"
                     android:paddingLeft="5dp"
                     android:text=""
@@ -295,7 +300,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/vitamins"
                     android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
             </TableRow>
 
             <TableRow>
@@ -512,16 +517,22 @@
                     android:textSize="17sp" />
             </TableRow>
 
-            <View
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:background="#4A4A4A" />
+                android:layout_height="wrap_content"
+                android:paddingTop="3dp">
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="1dp"
+                    android:background="#4A4A4A" />
+            </LinearLayout>
 
             <TableRow>
 
                 <TextView
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp"
+                    android:layout_height="10dp"
                     android:layout_gravity="start"
                     android:paddingLeft="5dp"
                     android:text=""
@@ -542,7 +553,7 @@
                     android:paddingLeft="5dp"
                     android:text="@string/minerals"
                     android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:textSize="18sp" />
             </TableRow>
 
             <TableRow>

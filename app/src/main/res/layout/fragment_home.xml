@@ -1,71 +1,75 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView android:layout_height="match_parent"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/tab_padding"
-    tools:context="com.example.steven.smarteating.activity.NutritionShow">
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frameLayout"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:weightSum="3">
+        android:padding="@dimen/tab_padding"
+        tools:context="com.example.steven.smarteating.activity.NutritionFactsShow">
 
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="20dp">
+        <ImageButton
+            android:id="@+id/the_five_group"
+            android:layout_width="326dp"
+            android:layout_height="152dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/the_five_group"
+            android:clickable="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/eating_suggestion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
 
-            <ImageButton
-                android:id="@+id/the_five_group"
-                android:layout_width="wrap_content"
-                android:layout_height="160dp"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:paddingBottom="20dp"
-                android:background="@drawable/the_five_group"
-                android:clickable="true"
-                android:padding="1dp"
-                android:scaleType="fitXY" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="20dp">
+        <ImageButton
+            android:id="@+id/eating_suggestion"
+            android:layout_width="326dp"
+            android:layout_height="152dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/eating_suggestion"
+            android:clickable="true"
+            android:padding="1dp"
+            android:paddingTop="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toTopOf="@+id/what_need_know"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageButton
-                android:id="@+id/eating_suggestion"
-                android:layout_width="wrap_content"
-                android:layout_height="160dp"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:background="@drawable/eating_suggestion"
-                android:clickable="true"
-                android:padding="1dp"
-                android:paddingTop="20dp"
-                android:scaleType="fitXY" />
-        </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp">
+        <ImageButton
+            android:id="@+id/what_need_know"
+            android:layout_width="326dp"
+            android:layout_height="155dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/what_need_know"
+            android:clickable="true"
+            android:padding="1dp"
+            android:paddingTop="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
-            <ImageButton
-                android:id="@+id/what_need_know"
-                android:layout_width="wrap_content"
-                android:layout_height="160dp"
-                android:layout_gravity="center"
-                android:adjustViewBounds="true"
-                android:background="@drawable/what_need_know"
-                android:clickable="true"
-                android:padding="1dp"
-                android:paddingTop="20dp"
-                android:scaleType="fitXY" />
-        </LinearLayout>
 
-    </LinearLayout>
-</FrameLayout>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
+
+    <!--android:layout_marginTop="?attr/actionBarSize"-->

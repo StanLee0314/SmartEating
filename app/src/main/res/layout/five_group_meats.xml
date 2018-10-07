@@ -1,197 +1,93 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/tab_padding"
-    tools:context="com.example.steven.smarteating.activity.NutritionShow">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="20dp">
-
-                <ImageButton
-                    android:id="@+id/meats_article"
-                    android:layout_width="340dp"
-                    android:layout_height="90dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/lean_meats"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="341dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingBottom="20dp"
-                android:paddingLeft="12dp">
-
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="318dp"
-                    android:layout_height="132dp"
-                    android:fontFamily="@font/roboto_light"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:text="This group includes all kinds of lean meat and poultry, fish, eggs, tofu, nuts and seeds and legumes/beans. Traditionally, the foods from this food group are considered ‘protein rich’ and most Australians have no trouble eating enough protein each day."
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
-
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="321dp"
-                    android:layout_height="40dp"
-                    android:fontFamily="@font/roboto_light"
-                    android:paddingLeft="10dp"
-                    android:paddingTop="10dp"
-                    android:text="This food group also provides a wide variety of other nutrients such as: iodine, iron, zinc, vitamins, especially B12, and essential fatty"
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:text="acids."
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="20dp">
-
-                <ImageButton
-                    android:id="@+id/meats_1"
-                    android:layout_width="340dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/meat_1"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY" />
-
-            </LinearLayout>
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frameLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/tab_padding"
+        tools:context="com.example.steven.smarteating.activity.NutritionShow">
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:paddingBottom="20dp"
-                android:paddingLeft="12dp">
+        <ImageButton
+            android:id="@+id/meats_article"
+            android:layout_width="340dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/lean_meats"
+            android:clickable="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="331dp"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:paddingTop="10dp"
-                    android:text="Lean red meats are a particularly good source of iron, zinc and B12 and are easily absorbed. Iron is especially important during infancy and for adolescent girls, pregnant women, menstruating women and endurance athletes."
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
-
-                <!--<TextView-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:fontFamily="@font/roboto_light"-->
-                <!--android:text="with at least 100mg calcium/100mL)"-->
-                <!--android:textColor="#4A4A4A"-->
-                <!--android:textSize="16sp" />-->
-
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="332dp"
-                    android:layout_height="96dp"
-                    android:fontFamily="@font/roboto_light"
-                    android:paddingTop="10dp"
-                    android:text="The iron and zinc in animal foods is more easily absorbed by the body than in plant foods such as nuts, seeds and legumes/beans. However, the vitamin C found in fruit and vegetables will help the absorption of iron from"
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+        <ImageButton
+            android:id="@+id/meats_1"
+            android:layout_width="340dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/meat_1"
+            android:clickable="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:text="these non-animal foods."
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="254dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meats_article"
+            app:srcCompat="@drawable/meats_picture_1" />
 
-            </LinearLayout>
+        <ImageButton
+            android:id="@+id/meats_2"
+            android:layout_width="340dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="20dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/meat_2"
+            android:clickable="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="20dp">
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="299dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meats_1"
+            app:srcCompat="@drawable/meats_picture_2" />
 
-                <ImageButton
-                    android:id="@+id/meats_2"
-                    android:layout_width="340dp"
-                    android:layout_height="200dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/meat_2"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingBottom="40dp"
-                android:paddingLeft="12dp"
-                android:orientation="vertical">
-
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="318dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:fontFamily="@font/roboto_light"
-                    android:paddingTop="10dp"
-                    android:text="The Guidelines recommend that you eat 1-3 serves of foods from this food group a day, depending on your age.  During pregnancy, 3-4 serves a day are recommended."
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="wrap_content"
+            android:layout_height="199dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meats_2"
+            app:srcCompat="@drawable/meats_picture_3" />
 
 
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="314dp"
-                    android:layout_height="37dp"
-                    android:layout_gravity="start"
-                    android:fontFamily="@font/roboto_light"
-                    android:paddingTop="10dp"
-                    android:text="Variety is the key. Over a week, a maximum of around 7 serves of lean red meat is"
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
+    </android.support.constraint.ConstraintLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/roboto_light"
-                    android:text="recommended."
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-    </ScrollView>
-</FrameLayout>
+</ScrollView>

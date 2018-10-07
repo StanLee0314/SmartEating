@@ -175,7 +175,7 @@ public class ReplacementFragment extends Fragment {
 
         Query query = null;
         if (searchText.equals("Search here")) {
-            query = db.limitToFirst(10);
+            query = db.limitToLast(10);
             //validation here
         } else if (searchText.trim().isEmpty()) {
             query = db.limitToFirst(10);

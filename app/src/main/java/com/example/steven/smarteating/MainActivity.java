@@ -20,6 +20,7 @@ import com.example.steven.smarteating.activity.CommunityMapsActivity;
 import com.example.steven.smarteating.activity.MapsActivity;
 import com.example.steven.smarteating.activity.PlantingSuggestion;
 import com.example.steven.smarteating.activity.QuizActivity;
+import com.example.steven.smarteating.activity.QuizIntroduction;
 import com.example.steven.smarteating.fragment.HomeFragment;
 import com.example.steven.smarteating.fragment.NutritionSearchFragment;
 import com.example.steven.smarteating.fragment.ReplacementFragment;
@@ -150,7 +151,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this, PlantingSuggestion.class);
             startActivity(intent);
         } else if (id == R.id.nutritionQuiz) {
-            Intent intent = new Intent(this, QuizActivity.class);
+            Intent intent = new Intent(this, QuizIntroduction.class);
             startActivity(intent);
         } else if (id == R.id.nearbyMarket) {
             Intent intent = new Intent(this, MapsActivity.class);

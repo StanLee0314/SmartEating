@@ -1,434 +1,290 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/tab_padding"
-    tools:context="com.example.steven.smarteating.activity.NutritionShow">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
-    <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/frameLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/tab_padding"
+        tools:context="com.example.steven.smarteating.activity.NutritionShow">
 
-        <LinearLayout
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="8dp"
+            android:background="#A9A9A9"
+            android:paddingLeft="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView3"
+            tools:layout_conversion_absoluteHeight="1dp"
+            tools:layout_conversion_absoluteWidth="328dp" />
+
+
+        <TextView
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingTop="8dp">
-
-                <me.biubiubiu.justifytext.library.JustifyTextView
-                    android:layout_width="339dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:fontFamily="@font/roboto_light"
-                    android:paddingBottom="18dp"
-                    android:paddingLeft="11dp"
-                    android:paddingTop="5dp"
-                    android:text="Many of the health problems in Australia today are linked to poor eating habits. Too many people eat too much saturated fat, added salt, added sugars and alcohol. Even reducing these by small amounts can make us healthier. It can help us manage our weight better and reduce our risk of chronic diseases like heart disease, stroke, Type 2 diabetes, some cancers and chronic kidney disease."
-                    android:textAlignment="textStart"
-                    android:textColor="#4A4A4A"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="3dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#A9A9A9"
-                    android:paddingLeft="5dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/roboto"
-                    android:text="Fat"
-                    android:textColor="#4A4A4A"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="96dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="Eating less saturated and trans fats may help lower your risk of heart disease. When buying products check the labels and choose the varieties that are lower in saturated and trans fats and higher in poly and monounsaturated"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text="fats."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <ImageView
-
-                    android:layout_width="190dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/fat" />
-
-            </LinearLayout>
-
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="39dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="So a diet that is low in saturated fats and trans fats, but that also includes moderate amounts "
-                android:textAlignment="textStart"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text="of unsaturated fats will help you stay healthy."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="3dp"
-                android:paddingTop="20dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#A9A9A9"
-                    android:paddingLeft="5dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/roboto"
-                    android:text="Salt"
-                    android:textColor="#4A4A4A"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="75dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="Australians now eat more salt than ever before. Eating too much salt may increase the risk of developing high blood pressure which is a risk factor for heart disease, stroke and "
-                android:textAlignment="textStart"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text="chronic kidney disease."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <ImageView
-
-                    android:layout_width="190dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/salt" />
-
-            </LinearLayout>
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="115dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="Salt eaten in Australia mostly comes from processed and packaged foods, not just the salt added during cooking or at the table. The taste for salty foods is something that is learned. It is possible to re-train your taste buds to get used to eating foods without "
-                android:textAlignment="textStart"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text="added salt."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="3dp"
-                android:paddingTop="20dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#A9A9A9"
-                    android:paddingLeft="5dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/roboto"
-                    android:text="Sugar"
-                    android:textColor="#4A4A4A"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="57dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="Too much sugar in food or drink can make it high in kilojoules, or energy dense. This can make it harder to control your weight. It has"
-                android:textAlignment="textStart"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text=" also been linked with tooth decay."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <ImageView
-
-                    android:layout_width="190dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/sugar" />
-
-            </LinearLayout>
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="171dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="Not all sugars are the same. There are naturally occurring sugars and added sugars. Sometimes people think that eating too much sugar leads to diabetes, because diabetes is a condition where blood glucose (or blood sugar needs to be managed. Sugar itself does not lead to diabetes. However, being overweight increases a person's risk of type 2 diabetes and too much added sugars can "
-                android:textAlignment="textStart"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text="cause weight gain."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingBottom="3dp"
-                android:paddingTop="20dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:background="#A9A9A9"
-                    android:paddingLeft="5dp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:fontFamily="@font/roboto"
-                    android:text="Alcohol"
-                    android:textColor="#4A4A4A"
-                    android:textSize="20sp" />
-
-            </LinearLayout>
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="135dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="Alcohol, is high in kilojoules, is nutrient poor and can lead to weight gain. Alcohol can be harmful to your health, the more alcohol you drink, the greater the risk. Even small amounts of alcohol are associated with increased risk of some cancers. Too much alcohol may also damage the liver and brain, and increase the "
-                android:textAlignment="textStart"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text="risk of high blood pressure and heart disease."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:paddingBottom="10dp"
-                android:paddingTop="10dp">
-
-                <ImageView
-
-                    android:layout_width="190dp"
-                    android:layout_height="100dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/alcohol" />
-
-            </LinearLayout>
-
-            <me.biubiubiu.justifytext.library.JustifyTextView
-                android:layout_width="339dp"
-                android:layout_height="74dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:paddingBottom="18dp"
-                android:paddingLeft="11dp"
-                android:paddingTop="5dp"
-                android:text="No level of drinking alcohol can be guaranteed as completely safe. However, drinking alcohol within the recommended responsible limits will enable healthy adults to keep their risk of "
-                android:textAlignment="textStart"
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="41dp"
-                android:layout_gravity="start"
-                android:fontFamily="@font/roboto_light"
-                android:gravity="start"
-                android:text="alcohol-related accidents, injuries, diseases and death low."
-                android:textColor="#4A4A4A"
-                android:textSize="16sp" />
-
-
-        </LinearLayout>
-
-
-    </ScrollView>
-
-</FrameLayout>
+            android:layout_marginStart="146dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Fat"
+            android:textColor="#4A4A4A"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3"
+            tools:layout_conversion_absoluteHeight="35dp"
+            tools:layout_conversion_absoluteWidth="29dp" />
+
+
+        <ImageView
+
+            android:id="@+id/imageView5"
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/fat"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            tools:layout_conversion_absoluteHeight="100dp"
+            tools:layout_conversion_absoluteWidth="190dp" />
+
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#A9A9A9"
+            android:paddingLeft="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            tools:layout_conversion_absoluteHeight="1dp"
+            tools:layout_conversion_absoluteWidth="328dp" />
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="144dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Salt"
+            android:textColor="#4A4A4A"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view4"
+            tools:layout_conversion_absoluteHeight="35dp"
+            tools:layout_conversion_absoluteWidth="35dp" />
+
+
+        <ImageView
+
+            android:id="@+id/imageView8"
+            android:layout_width="190dp"
+            android:layout_height="92dp"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/salt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView7"
+            tools:layout_conversion_absoluteHeight="100dp"
+            tools:layout_conversion_absoluteWidth="190dp" />
+
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#A9A9A9"
+            android:paddingLeft="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10"
+            tools:layout_conversion_absoluteHeight="1dp"
+            tools:layout_conversion_absoluteWidth="328dp" />
+
+
+        <TextView
+            android:id="@+id/sugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="144dp"
+            android:fontFamily="@font/roboto"
+            android:text="Sugar"
+            android:textColor="#4A4A4A"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view5"
+            tools:layout_conversion_absoluteHeight="35dp"
+            tools:layout_conversion_absoluteWidth="52dp" />
+
+
+        <ImageView
+
+            android:id="@+id/sugar_picture"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/sugar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView11"
+            tools:layout_conversion_absoluteHeight="100dp"
+            tools:layout_conversion_absoluteWidth="190dp" />
+
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:background="#A9A9A9"
+            android:paddingLeft="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView13"
+            tools:layout_conversion_absoluteHeight="1dp"
+            tools:layout_conversion_absoluteWidth="328dp" />
+
+
+        <TextView
+            android:id="@+id/alcohol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto"
+            android:text="Alcohol"
+            android:textColor="#4A4A4A"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view6"
+            tools:layout_conversion_absoluteHeight="35dp"
+            tools:layout_conversion_absoluteWidth="68dp" />
+
+
+        <ImageView
+
+            android:id="@+id/alcohol_picture"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="8dp"
+            android:adjustViewBounds="true"
+            android:padding="1dp"
+            android:paddingBottom="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/alcohol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView14"
+            tools:layout_conversion_absoluteHeight="100dp"
+            tools:layout_conversion_absoluteWidth="190dp" />
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="201dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/before_fat" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="115dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            app:srcCompat="@drawable/fat_1" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="86dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:srcCompat="@drawable/fat_2" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="96dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10"
+            app:srcCompat="@drawable/salt_1" />
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="wrap_content"
+            android:layout_height="149dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8"
+            app:srcCompat="@drawable/salt_2" />
+
+        <ImageView
+            android:id="@+id/imageView11"
+            android:layout_width="wrap_content"
+            android:layout_height="94dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sugar"
+            app:srcCompat="@drawable/sugar_1" />
+
+        <ImageView
+            android:id="@+id/imageView13"
+            android:layout_width="wrap_content"
+            android:layout_height="219dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sugar_picture"
+            app:srcCompat="@drawable/sugar_2" />
+
+        <ImageView
+            android:id="@+id/imageView14"
+            android:layout_width="wrap_content"
+            android:layout_height="186dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alcohol"
+            app:srcCompat="@drawable/alcohol_1" />
+
+        <ImageView
+            android:id="@+id/imageView15"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alcohol_picture"
+            app:srcCompat="@drawable/alcohol_2" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

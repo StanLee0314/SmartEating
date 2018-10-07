@@ -57,21 +57,21 @@ public class NutritionFactsShow extends AppCompatActivity {
 
         titleView.setText(getIntent().getStringExtra(NAME_RES_ID));
         taskList.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
-        if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin A")) {
+        if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Vitamin A-Rich Foods")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_a");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin B1")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Vitamin B1-Rich Foods")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_b1");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin B6")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Vitamin B6-Rich Foods")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_b6");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin B12")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Vitamin B12-Rich Foods")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_b12");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin C")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Vitamin C-Rich Foods")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_c");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Vitamin E")) {
-            db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_e");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Iron")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Vitamin E-Rich Foods")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("iron");
-        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Top 10 Suggested Foods Contain Calcium")) {
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Iron-Rich Foods")) {
+            db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("vitamin_e");
+        } else if (getIntent().getStringExtra(NAME_RES_ID).equals("Suggested Calcium-Rich Foods")) {
             db = FirebaseDatabase.getInstance().getReference("smartEating").child("underNutrition").child("calcium");
         }
         getList();
@@ -81,7 +81,7 @@ public class NutritionFactsShow extends AppCompatActivity {
 
         Query query = null;
 
-        query = db.limitToFirst(20);
+        query = db.limitToFirst(15);
 
         FirebaseRecyclerOptions<TopTenFood> response = new FirebaseRecyclerOptions.Builder<TopTenFood>()
                 .setQuery(query, TopTenFood.class)

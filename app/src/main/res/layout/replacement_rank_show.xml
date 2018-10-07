@@ -17,6 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:paddingTop="20dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -26,7 +27,9 @@
 
                 <TableLayout
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content">
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="13dp">
+
 
                     <TableRow>
 
@@ -36,9 +39,10 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
                             android:fontFamily="@font/roboto"
-                            android:paddingLeft="15dp"
+                            android:paddingLeft="25dp"
                             android:textColor="#000"
                             android:textSize="23sp" />
+
 
                         <TextView
                             android:id="@+id/input_food_category"
@@ -52,6 +56,7 @@
                             android:textSize="15sp" />
 
                     </TableRow>
+
 
                 </TableLayout>
 
@@ -77,7 +82,7 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingRight="5dp">
+                android:paddingLeft="20dp">
 
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/foodreplacement_rv_list"

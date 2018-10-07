@@ -31,7 +31,7 @@ public class QuizResultShow extends AppCompatActivity {
         if (points >= 8) {
             setContentView(R.layout.quiz_result_high);
             pointsResult = findViewById(R.id.high_score);
-            pointsResult.setText("You scored " + points + " out of 10 points");
+            pointsResult.setText("You scored " + points + " out of 10 points.");
 
             learn_more = findViewById(R.id.high_learn_more);
             learn_more.setOnClickListener(new View.OnClickListener() {
@@ -54,7 +54,7 @@ public class QuizResultShow extends AppCompatActivity {
         } else if ((points < 8) && (points >= 6)) {
             setContentView(R.layout.quiz_medium_high);
             pointsResult = findViewById(R.id.medium_high_score);
-            pointsResult.setText("You scored " + points + " out of 10 points");
+            pointsResult.setText("You scored " + points + " out of 10 points.");
 
             learn_more = findViewById(R.id.mediumH_learn_more);
             learn_more.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +77,7 @@ public class QuizResultShow extends AppCompatActivity {
         } else if ((points < 6) && (points >= 4)) {
             setContentView(R.layout.quiz_medium_low);
             pointsResult = findViewById(R.id.medium_low_score);
-            pointsResult.setText("You scored " + points + " out of 10 points");
+            pointsResult.setText("You scored " + points + " out of 10 points.");
             learn_more = findViewById(R.id.medium_low_learn_more);
             learn_more.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -110,7 +110,7 @@ public class QuizResultShow extends AppCompatActivity {
         } else {
             setContentView(R.layout.quiz_result_low);
             pointsResult = findViewById(R.id.low_score);
-            pointsResult.setText("You scored " + points + " out of 10 points");
+            pointsResult.setText("You scored " + points + " out of 10 points.");
             learn_more = findViewById(R.id.low_learn_more);
             learn_more.setOnClickListener(new View.OnClickListener() {
                 @Override

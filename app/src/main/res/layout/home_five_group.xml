@@ -1,149 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="346dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/roboto_light"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="Australian guide to healthy eating recommends the following five groups of food."
+        android:textColor="#4A4A4A"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:paddingBottom="5dp"
-            android:paddingTop="10dp"
-            android:paddingLeft="10dp"
-            android:fontFamily="@font/roboto_light"
-            android:text="Australian guide to healthy eating recommends the following five groups of food."
-            android:textColor="#4A4A4A"
-            android:textSize="16sp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:paddingBottom="5dp"
-            android:paddingTop="10dp"
-            android:paddingLeft="10dp"
-            android:fontFamily="@font/roboto_light"
-            android:text="Choose one category to explore more:"
-            android:textColor="#4A4A4A"
-            android:textSize="16sp" />
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="16dp"
-            android:weightSum="5">
-
-            <LinearLayout
-                android:layout_width="370dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:paddingLeft="14.5dp"
-                android:paddingBottom="15dp">
-
-                <ImageButton
-                    android:id="@+id/milk_click"
-                    android:layout_width="340dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:background="@drawable/milk"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:paddingBottom="20dp"
-                    android:scaleType="fitXY" />
-
-            </LinearLayout>
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/roboto_light"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:text="Choose one category to explore more:"
+        android:textColor="#4A4A4A"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-            <LinearLayout
-                android:layout_width="370dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:paddingLeft="14.5dp"
-                android:paddingBottom="15dp">
-
-                <ImageButton
-                    android:id="@+id/lean_meats_click"
-                    android:layout_width="340dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:paddingBottom="20dp"
-                    android:background="@drawable/lean_meats"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:scaleType="fitXY" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="370dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:paddingLeft="14.5dp"
-                android:paddingBottom="15dp">
-
-                <ImageButton
-                    android:id="@+id/fruits_click"
-                    android:layout_width="340dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:paddingBottom="20dp"
-                    android:background="@drawable/fruits"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:scaleType="fitXY" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="370dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:paddingLeft="14.5dp"
-                android:paddingBottom="15dp">
-
-                <ImageButton
-                    android:id="@+id/vegetables_click"
-                    android:layout_width="340dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:paddingBottom="20dp"
-                    android:background="@drawable/vegetables"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:scaleType="fitXY" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="370dp"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:paddingLeft="14.5dp"
-                android:paddingBottom="10dp">
-
-                <ImageButton
-                    android:id="@+id/grains_click"
-                    android:layout_width="340dp"
-                    android:layout_height="70dp"
-                    android:layout_gravity="center"
-                    android:adjustViewBounds="true"
-                    android:paddingBottom="20dp"
-                    android:background="@drawable/grains"
-                    android:clickable="true"
-                    android:padding="1dp"
-                    android:scaleType="fitXY" />
-
-            </LinearLayout>
-
-        </LinearLayout>
+    <ImageButton
+        android:id="@+id/milk_click"
+        android:layout_width="329dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/milk"
+        android:clickable="true"
+        android:padding="1dp"
+        android:paddingBottom="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
-    </LinearLayout>
+    <ImageButton
+        android:id="@+id/lean_meats_click"
+        android:layout_width="329dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/lean_meats"
+        android:clickable="true"
+        android:padding="1dp"
+        android:paddingBottom="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/milk_click" />
+
+
+    <ImageButton
+        android:id="@+id/fruits_click"
+        android:layout_width="329dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/fruits"
+        android:clickable="true"
+        android:padding="1dp"
+        android:paddingBottom="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lean_meats_click" />
+
+
+    <ImageButton
+        android:id="@+id/vegetables_click"
+        android:layout_width="329dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/vegetables"
+        android:clickable="true"
+        android:padding="1dp"
+        android:paddingBottom="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fruits_click" />
+
+
+    <ImageButton
+        android:id="@+id/grains_click"
+        android:layout_width="329dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/grains"
+        android:clickable="true"
+        android:padding="1dp"
+        android:paddingBottom="20dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vegetables_click" />
+
+
 </android.support.constraint.ConstraintLayout>
+</ScrollView>    
+    
